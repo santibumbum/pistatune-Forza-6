@@ -1,0 +1,1363 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#111821">
+  <meta name="description" content="PistaTune: tuneos y configuraciones fáciles para Forza Horizon 6. Elegí un auto, descubrí qué piezas mejorar y copiá ajustes de marchas, neumáticos y suspensión gratis, sin IA.">
+  <title>PistaTune | Tuneos gratis y fáciles para Forza Horizon 6</title>
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:site_name" content="PistaTune">
+  <meta property="og:title" content="PistaTune | Tuneos gratis para Forza Horizon 6">
+  <meta property="og:description" content="Elegí tu auto, decidí cómo querés manejar y recibí ajustes y piezas recomendadas. Gratis, fácil y sin IA. Los ajustes son orientativos.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="PistaTune — Configurador de autos para Forza Horizon 6">
+  <meta name="twitter:description" content="Tuneos y mejoras para tus autos en tres pasos, sin IA y gratis.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111b21'/%3E%3Cpath d='M19 49V15h19c19 0 19 25 0 25H19' stroke='%238be6b0' stroke-width='8' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"PistaTune","applicationCategory":"GameApplication","operatingSystem":"Web","inLanguage":"es","description":"Herramienta no oficial para calcular configuraciones iniciales y recomendar mejoras de autos en Forza Horizon 6. Gratuita y sin inteligencia artificial.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  
+
+
+
+
+<style>
+:root{--bg:#0e141a;--surface:#172028;--surface-soft:#1b252e;--border:#2c3841;--muted:#a0b0b9;--text:#f4f7f7;--accent:#8be6b0;--accent-strong:#6de4a0;--accent-text:#10281d;--gold:#f1d899;--danger:#ffaca6;--radius:18px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;background:var(--bg);color:var(--text);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Arial,sans-serif}button,input,select{font:inherit}button{cursor:pointer}button:disabled{cursor:default;opacity:.45}a{color:inherit}a:hover{color:var(--accent)}:focus-visible{outline:2px solid var(--accent);outline-offset:3px}strong{font-weight:700}p{margin:0}.shell{max-width:1190px;margin:0 auto;padding:0 28px}.ambient{position:absolute;pointer-events:none;z-index:-1;filter:blur(45px);border-radius:100%;opacity:.23}.ambient-1{width:470px;height:470px;background:#185d4d;top:115px;right:7%}.ambient-2{width:380px;height:380px;background:#233e66;top:550px;left:-210px}.site-header{border-bottom:1px solid rgba(255,255,255,.09);height:76px;background:rgba(12,19,24,.80);backdrop-filter:blur(16px)}.header-inner{height:100%;display:flex;align-items:center;justify-content:space-between}.brand{display:inline-flex;gap:9px;align-items:center;font-size:25px;font-weight:830;letter-spacing:-1.4px;text-decoration:none}.brand:hover{color:var(--text)}.brand-icon{background:var(--accent);color:#143021;width:33px;height:33px;border-radius:10px;font-size:22px;display:flex;align-items:center;justify-content:center;position:relative;font-style:italic;box-shadow:0 4px 25px rgba(112,228,160,.16)}.brand-spark{position:absolute;right:-5px;top:-8px;font-size:12px;color:#dcfff0;text-shadow:1px 1px #18422c}.brand-accent{color:var(--accent)}.brand small{font-size:9px;letter-spacing:1px;border:1px solid #466458;color:#bde8cf;padding:2px 5px;border-radius:4px;vertical-align:top;margin-left:2px}.header-actions{display:flex;align-items:center;gap:20px}.header-tag{color:#adcfbd;font-size:12px}.btn{border:1px solid transparent;border-radius:11px;padding:12px 16px;display:inline-flex;align-items:center;justify-content:center;gap:9px;font-size:13px;line-height:1.2;font-weight:750;transition:background .15s,border-color .15s,transform .15s;min-height:44px}.btn:active{transform:translateY(1px)}.btn.primary{color:var(--accent-text);background:var(--accent);border-color:var(--accent)}.btn.primary:hover{background:#aeefc8}.btn.outline{color:#eaf3ed;background:transparent;border-color:#415049}.btn.outline:hover{background:#223129}.btn.ghost{color:#d2ded8;background:#1b2528;border-color:#33423b;padding:10px 14px;min-height:40px}.btn.ghost:hover{border-color:#689679}.count{border-radius:10px;background:#334f42;padding:1px 7px;font-size:11px}.main-shell{padding-top:50px}.hero{max-width:820px}.eyebrow,.section-kicker,.side-eyebrow{color:var(--accent);font-size:10.5px;font-weight:850;letter-spacing:2px}.eyebrow{display:flex;align-items:center;gap:8px}.indicator{width:7px;height:7px;background:var(--accent);border-radius:50%;box-shadow:0 0 0 5px #8be6b019}.hero h1{font-size:clamp(37px,5vw,59px);font-weight:850;letter-spacing:-2.6px;line-height:1.13;margin:14px 0 12px}.hero h1 em{font-style:normal;color:var(--accent)}.hero>p{color:#b4c0c6;font-size:16px}.hero>p strong{color:#e9f6ed;font-weight:650}.steps{display:flex;align-items:center;gap:11px;margin:42px 0 22px;max-width:700px}.step{display:flex;align-items:center;gap:9px;border:0;background:transparent;color:#7f8d96;padding:0;white-space:nowrap;font-size:13px;font-weight:750}.step-num{width:28px;height:28px;display:flex;justify-content:center;align-items:center;border:1px solid #37444c;border-radius:50%;font-size:12px}.step.active{color:var(--text)}.step.active .step-num{color:#10251a;border-color:var(--accent);background:var(--accent)}.step.complete{color:#b9d9c6}.step.complete .step-num{border-color:#4c8063;color:var(--accent)}.step-link{height:1px;min-width:17px;flex:1;background:#3c4c4c}.workspace{display:grid;grid-template-columns:minmax(0,760px) minmax(270px,320px);gap:26px;align-items:start}.main-panel{background:var(--surface);border:1px solid #34424a;border-radius:22px;box-shadow:0 24px 75px #0004;min-width:0}.step-panel{padding:30px}.step-panel[hidden]{display:none}.section-topline{display:flex;justify-content:space-between;align-items:center;gap:12px}.subtle-label{font-size:11px;color:#82959c}.step-panel h2{font-size:28px;letter-spacing:-.8px;line-height:1.2;margin:10px 0 8px}.section-description{color:#a9b7bf;font-size:13px;max-width:590px;margin-bottom:25px}.field-group{display:flex;flex-direction:column;gap:8px;min-width:0}.field-group label{font-size:12.5px;font-weight:700;color:#dce5e6}input:not([type=checkbox]):not([type=range]),select{width:100%;height:47px;border:1px solid #415059;background:#121b23;border-radius:10px;padding:0 13px;color:var(--text);outline:0;min-width:0}input::placeholder{color:#71848d}input:focus,select:focus{border-color:var(--accent)!important;box-shadow:0 0 0 3px #70e3a21c!important}select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%23b3c8bd' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-position:right 12px center;background-repeat:no-repeat;padding-right:38px}.search-wrap{position:relative}.search-wrap input{height:54px!important;padding-left:43px!important;font-size:15px;background:#111b21!important}.search-icon{position:absolute;left:16px;top:4px;font-size:29px;color:#8fb7a3}.clear-search{position:absolute;right:12px;top:13px;color:#b1bfc0;background:transparent;border:0;font-size:24px;line-height:1}.input-hint,.small-note{font-size:11.5px;line-height:1.5;color:#94a4ab}.search-options{margin-top:4px;border:1px solid #406050;border-radius:12px;background:#1a262b;max-height:245px;overflow:auto;box-shadow:0 20px 35px #0008;position:absolute;left:0;right:0;z-index:10;padding:5px}.car-search-group{position:relative}.option-row{display:flex;width:100%;align-items:center;justify-content:space-between;gap:9px;color:#f0f5f3;border:0;background:transparent;border-radius:8px;padding:10px 12px;text-align:left}.option-row:hover,.option-row:focus{background:#2c4138}.option-row small{color:#acc4b5;white-space:nowrap}.search-empty{padding:11px;font-size:12px;color:#afc2bc}.selected-car{border:1px solid #3a6653;background:linear-gradient(110deg,#223b32,#1b292a);padding:14px;display:flex;gap:13px;align-items:center;border-radius:14px;margin-top:17px;min-height:90px}.car-thumbnail{background:#2b4b3c;border-radius:11px;display:flex;align-items:center;justify-content:center;width:64px;height:56px;font-size:32px;flex:none}.selected-car-info{display:flex;flex-direction:column;gap:2px;min-width:0;flex:1}.selected-eyebrow{font-size:9px;font-weight:850;letter-spacing:1.5px;color:#a5d7b7}.selected-car-info strong{font-size:15px;overflow-wrap:anywhere}.selected-car-info small{font-size:11px;color:#a4b8b4}.verified-label{background:#2b5440;border:1px solid #4a8160;padding:5px 7px;border-radius:50px;font-size:10px;color:#bbf6d2;white-space:nowrap}.under-search-actions{display:flex;flex-wrap:wrap;gap:10px 24px;margin:16px 0 28px}.link-button{border:0;background:transparent;color:#a8eac3;font-weight:700;font-size:12px;padding:0;text-align:left}.link-button:hover{text-decoration:underline;color:#d1fbe2}.manual-car-panel{display:grid;gap:14px;padding:16px;border-radius:12px;border:1px dashed #57735f;margin-top:18px;background:#13231d}.manual-car-panel[hidden]{display:none}.notice{font-size:12px;color:#d3e6d7}.simple-settings{border-top:1px solid #334149;padding-top:23px}.settings-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:15px}.settings-head h3{font-size:15px;margin:0}.mini-tag{color:#adbfaf;font-size:10px;background:#283930;border-radius:100px;padding:3px 8px}.settings-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}.extras{margin-top:22px;border:1px solid #36454b;background:#141e25;border-radius:12px}.extras summary{list-style:none;display:flex;align-items:center;gap:10px;padding:17px 15px;cursor:pointer;font-weight:750;font-size:12px}.extras summary::-webkit-details-marker,.range-details summary::-webkit-details-marker{display:none}.summary-icon{color:var(--accent);font-size:22px;line-height:1}.extras[open] .summary-icon{transform:rotate(45deg)}.summary-right{margin-left:auto;color:#87979d;font-size:11px;font-weight:400}.extras-content{padding:0 16px 18px}.extras-content>.small-note{margin-bottom:16px}.subheading{font-size:12px;font-weight:750;color:#d9e7de;margin:19px 0 10px}.toggle-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.toggle-grid label{font-size:12px;display:flex;gap:8px;align-items:center;color:#c7d9d0}.toggle-grid input{accent-color:var(--accent);width:17px;height:17px}.range-details{margin-top:18px;background:#1b282c;padding:12px;border-radius:9px}.range-details>summary{padding:2px;font-size:12px;color:#b8eac8;cursor:pointer}.range-details .small-note{margin:12px 0}.range-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:9px;align-items:center}.range-grid strong{font-size:11px;color:#becbc7}.range-grid label{font-size:11px}.range-grid input{height:39px!important;padding:0 7px!important;font-size:12px}.panel-bottom{border-top:1px solid #314048;padding-top:21px;margin-top:26px;display:flex;align-items:center;justify-content:space-between;gap:12px}.panel-bottom>span{color:#8e9ea5;font-size:12px}.sidebar{display:flex;flex-direction:column;gap:16px}.side-card{border:1px solid #334148;border-radius:17px;background:#19232b;padding:23px}.side-summary{background:linear-gradient(165deg,#202d34,#152027)}.car-illustration{margin:17px -10px 5px}.car-illustration svg{width:100%;max-height:142px}.side-summary>strong{font-size:17px;letter-spacing:-.3px;display:block;margin-top:6px}.side-summary>small{font-size:11px;color:#a8b5b9;display:block;margin-top:3px}.side-divider{border-top:1px solid #3a4e4b;margin:20px 0 15px}.side-mode{display:flex;align-items:center;gap:10px;font-weight:800;margin:11px 0 0}.side-mode>span:first-child{font-size:26px}.side-help{position:relative;padding-left:23px}.help-icon{display:flex;align-items:center;justify-content:center;border:1px solid #57735f;width:26px;height:26px;border-radius:50%;color:var(--accent);font-weight:850;margin-bottom:11px}.side-help strong{font-size:13px}.side-help p{font-size:12px;color:#aebdc0;margin:7px 0 13px}.side-help a{color:#a6eaba;font-size:12px;text-decoration:none}.side-help a:hover{text-decoration:underline}.side-transparency{display:grid;gap:8px;color:#a3b6ae;font-size:11px}.footer{border-top:1px solid #29353a;margin:45px 0 28px;padding-top:17px;display:flex;justify-content:space-between;gap:15px;color:#73858e;font-size:11px}.mode-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.mode-card{border:1px solid #39474b;background:#141e25;padding:17px;border-radius:13px;color:var(--text);display:flex;gap:12px;align-items:flex-start;text-align:left;min-height:119px;transition:background .15s,border-color .15s}.mode-card:hover{border-color:#6aa383;background:#1d3028}.mode-card.selected{border:2px solid var(--accent);background:#23382e;padding:16px}.mode-emoji{background:#2d3e35;border-radius:10px;width:41px;height:41px;display:flex;align-items:center;justify-content:center;font-size:23px;flex-shrink:0}.mode-card-content{display:grid;gap:5px;flex:1}.mode-card-content strong{font-size:13px;line-height:1.25}.mode-card-content small{font-size:11px;color:#adbec1;line-height:1.3}.mode-select{color:var(--accent);font-size:17px}.compact-extra{margin-top:18px}.bias-labels{display:flex;justify-content:space-between;gap:8px;color:#a3b8ad;font-size:11px;margin:13px 0 10px}.bias-labels strong{color:#f2f7f3}input[type=range]{width:100%;accent-color:var(--accent)}.result-header{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}.result-pill{font-size:11px;white-space:nowrap;color:#b9efc9;border-radius:20px;padding:7px 9px;background:#2b4035}.honesty-banner{display:flex;gap:12px;border:1px solid #665c3f;background:#2d2923;border-radius:13px;padding:13px 15px;color:#f4e5b6;margin:8px 0 16px}.honesty-icon{font-size:22px;line-height:1.2}.honesty-banner strong{font-size:12px}.honesty-banner p{font-size:11px;line-height:1.5;color:#d0c4a6;margin-top:3px}.source-warning{font-size:11px;color:#a3b6b7;padding:0 2px 12px}.result-actions{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 25px}.result-toolbar{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:12px}.result-toolbar strong{font-size:14px;display:block}.result-toolbar small{font-size:11px;color:#94a4aa}.results-list{display:grid;gap:10px}.tune-section{background:#141e24;border:1px solid #33434b;border-radius:13px;overflow:hidden}.tune-section>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;padding:16px}.tune-section>summary::-webkit-details-marker{display:none}.tune-section[open]>summary{border-bottom:1px solid #324047}.result-index{width:29px;height:29px;border-radius:9px;background:#293a37;color:#b4e9c6;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:850}.result-title{display:grid;gap:3px;flex:1}.result-title strong{font-size:13px}.result-title small{font-size:10.5px;color:#94a6ad}.result-chevron{font-size:16px;color:#a8bab5;transition:transform .15s}.tune-section[open] .result-chevron{transform:rotate(90deg)}.result-body{padding:13px 16px 16px}.result-rows{display:grid;grid-template-columns:1fr 1fr;gap:7px}.tune-row{padding:10px 12px;border:1px solid #314049;border-radius:9px;background:#1e2b31;min-height:67px;display:flex;flex-direction:column;justify-content:center;gap:3px}.tune-row .r-label{font-size:11px;color:#b3c1c1}.tune-row .r-value{font-size:20px;font-weight:850;letter-spacing:-.5px;overflow-wrap:anywhere}.tune-row .r-unit{font-size:10px;color:#9eb0ac;font-weight:500;margin-left:4px}.tune-row .r-value.relative{font-size:14px;letter-spacing:0;color:#c1e4c9}.tune-row.disabled{opacity:.72;border-style:dashed}.result-note{color:#9aafb0;font-size:11px;line-height:1.5;margin:12px 0}.result-note.attention{color:#f6db96}.result-copy{color:#addcbe;background:transparent;border:1px solid #4c675b;font-size:11px;border-radius:9px;padding:8px 12px;font-weight:750}.result-copy:hover{background:#2b3e36}.bottom-advice{border-left:3px solid #73bb95;background:#1b2c29;padding:14px 16px;margin-top:18px;color:#adc3ba;font-size:12px}.bottom-advice strong{color:#ecf7ee}.saves-dialog{width:min(560px,calc(100vw - 30px));border:1px solid #47594f;border-radius:18px;background:#18242a;color:#f6f9f8;padding:22px;box-shadow:0 25px 100px #000c;max-height:80vh}.saves-dialog::backdrop{background:#020807cc;backdrop-filter:blur(4px)}.dialog-header{display:flex;justify-content:space-between;gap:15px;align-items:start}.dialog-header h2{margin:3px 0 15px;font-size:22px;letter-spacing:-.4px}.icon-btn{background:#29383d;border:1px solid #4b595b;color:#eef6f3;width:35px;height:35px;border-radius:10px}.saved-items{margin-top:18px;display:grid;gap:9px;max-height:310px;overflow:auto}.saved-row{border:1px solid #3b4e4d;border-radius:11px;padding:13px;display:flex;gap:14px;align-items:center;justify-content:space-between}.saved-row strong{font-size:13px}.saved-row small{color:#9eb7af;display:block;margin-top:4px}.saved-row-actions{display:flex;gap:5px}.saved-row-actions button{background:#293c36;color:#cceddb;border:1px solid #507563;border-radius:7px;padding:7px 9px;font-size:11px}.saved-row-actions button.delete{color:#f4b2ad;border-color:#77504a;background:#342929}.empty-saves{font-size:12px;color:#a5b4b5;padding:17px 0}.dialog-footer{display:flex;justify-content:space-between;gap:8px;margin-top:17px;flex-wrap:wrap}.toast{background:#dcf9e7;color:#0d3320;font-size:13px;font-weight:750;padding:12px 17px;position:fixed;bottom:22px;left:50%;transform:translate(-50%,20px);z-index:120;opacity:0;pointer-events:none;border-radius:12px;transition:opacity .2s,transform .2s;box-shadow:0 8px 35px #0008;max-width:calc(100vw - 24px);text-align:center}.toast.show{opacity:1;transform:translate(-50%,0)}.no-js{position:fixed;bottom:0;background:#3b251d;color:#fff;padding:18px;width:100%;text-align:center}@media(max-width:1000px){.workspace{grid-template-columns:minmax(0,1fr) 270px;gap:15px}.step-panel{padding:23px}.side-card{padding:18px}}@media(max-width:780px){.workspace{display:flex;flex-direction:column}.main-panel{width:100%}.sidebar{width:100%;display:grid;grid-template-columns:1fr 1fr}.side-summary{grid-column:1 / -1}.side-summary .car-illustration{display:none}.steps{margin-top:30px}.main-shell{padding-top:36px}.footer{display:block}.footer span{display:block;margin-bottom:7px}}@media(max-width:560px){.shell{padding-left:16px;padding-right:16px}.site-header{height:67px}.brand{font-size:22px}.brand-icon{width:31px;height:31px}.header-tag,.hide-small{display:none}.header-actions{gap:8px}.hero h1{font-size:38px;letter-spacing:-1.7px}.hero>p{font-size:14px}.steps{gap:7px}.step{font-size:10px;gap:6px}.step-num{width:24px;height:24px;font-size:10px}.step-link{min-width:5px}.step-panel{padding:19px}.step-panel h2{font-size:25px}.settings-grid,.mode-grid{grid-template-columns:1fr}.mode-card{min-height:83px}.verified-label{display:none}.selected-car-info strong{font-size:13px}.car-thumbnail{width:52px;height:50px}.panel-bottom{flex-wrap:wrap}.panel-bottom .btn.primary{margin-left:auto}.sidebar{display:flex}.range-grid{grid-template-columns:1.15fr 1fr 1fr;gap:5px}.range-grid label{font-size:10px}.range-grid input{font-size:11px;padding:0 4px!important}.toggle-grid{grid-template-columns:1fr}.result-rows{grid-template-columns:1fr 1fr}.tune-row{padding:9px}.tune-row .r-value{font-size:17px}.result-header{flex-direction:column;gap:1px}.result-actions .btn{flex:1;white-space:nowrap}.result-actions .btn:first-child{flex:1 0 100%}.footer{font-size:10px}}@media print{body{background:#fff;color:#111}.site-header,.hero,.steps,.sidebar,.result-actions,.result-toolbar,.panel-bottom,.footer,.ambient{display:none!important}.main-panel{border:0;background:transparent;box-shadow:none}.workspace{display:block}.step-panel{padding:0}.step-panel:not(#step3){display:none!important}#step3{display:block!important}.tune-section{break-inside:avoid;border-color:#aaa}.tune-section>summary,.tune-row{color:#111;background:#fff}.result-body{display:block!important}.result-chevron{display:none}.r-value,.r-label,.result-title strong{color:#000!important}}
+
+/* EasyTune 1.1: buscador de alto contraste. El texto escrito es siempre oscuro sobre fondo claro. */
+.search-wrap input[type="search"] {
+  -webkit-appearance:none;appearance:none;color-scheme:light;
+  background:#f6fdf8!important; color:#102a1e!important;
+  -webkit-text-fill-color:#102a1e!important;caret-color:#176a42!important;
+  border:2px solid #abd8bf!important;font-weight:650;
+}
+.search-wrap input[type="search"]:focus {
+  background:#fff!important;border-color:#70db99!important;
+  box-shadow:0 0 0 4px #70db992a!important;
+}
+.search-wrap input[type="search"]::placeholder {color:#586e63!important;-webkit-text-fill-color:#586e63!important;opacity:1;font-weight:450}
+.search-wrap input[type="search"]::selection {background:#9ce7b9;color:#112a1b}
+.search-wrap input[type="search"]::-webkit-search-cancel-button {-webkit-appearance:none;appearance:none}
+.search-wrap .search-icon {color:#2f7350}
+.search-wrap .clear-search {color:#27543b;font-weight:800}
+.search-feedback {padding:9px 12px;border-radius:9px;border:1px solid #43755a;background:#20372b;color:#d5f6e2;font-size:12px;line-height:1.45}
+.search-feedback[hidden] {display:none}
+.option-row--custom {margin-top:5px;border:1px solid #568c6a;background:#264936;color:#e2ffe9;display:flex;gap:9px}
+.option-row--custom:hover,.option-row--custom:focus {background:#316949}
+.input-hint strong {color:#d5e6da;font-weight:650}
+
+/* EasyTune 1.2: the search list is IN THE DOCUMENT FLOW rather than an absolute overlay.
+   This fixes the report that the 'Elegir auto' menu covers the letters being typed. */
+[hidden] {display:none!important}
+.car-search-group {position:relative;isolation:isolate}
+.car-search-group .search-wrap {position:relative;width:100%;}
+.car-search-group .search-wrap input[type="search"]{
+  display:block!important;width:100%!important;min-height:56px!important;height:56px!important;
+  padding:0 46px 0 47px!important;position:relative!important;
+  z-index:0;line-height:1.4!important;letter-spacing:0!important;
+  font-size:16px!important;appearance:none!important;-webkit-appearance:none!important;
+  background:#f6fdf8!important;color:#102a1e!important;-webkit-text-fill-color:#102a1e!important;
+  caret-color:#176a42!important;border-radius:12px!important;
+}
+.car-search-group .search-wrap input[type="search"]::placeholder {color:#496b58!important;opacity:1}
+.car-search-group .search-icon {
+  pointer-events:none;top:50%!important;left:16px!important;
+  transform:translateY(-50%);line-height:1;font-size:25px;
+}
+.car-search-group .clear-search {z-index:1;top:50%!important;transform:translateY(-50%);right:13px!important}
+.car-search-group .search-options {
+  position:static!important;inset:auto!important;top:auto!important;left:auto!important;right:auto!important;
+  width:100%;height:auto;max-height:300px;overflow:auto;margin:2px 0 0;z-index:auto!important;
+  box-shadow:0 8px 24px #0005;
+}
+.car-search-group .option-row {min-height:43px;white-space:normal}
+.car-search-group .option-row>span:first-child {min-width:0;overflow-wrap:anywhere}
+.car-search-group .option-row:focus-visible {outline:2px solid #a5f2c0;outline-offset:-2px}
+.catalog-bar {display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:3px 0}
+.catalog-indicator {display:flex;align-items:center;gap:5px;flex-wrap:wrap;font-size:12px;color:#c4d9d0}
+.catalog-dot {width:7px;height:7px;border-radius:100%;background:#e4bc7c;display:inline-block;margin-right:4px}
+.catalog-bar.ready .catalog-dot {background:#7cdda5}
+.catalog-bar .input-hint {font-size:11px;display:inline;color:#9eb0ab}
+.catalog-refresh {border:1px solid #45624f;color:#c6e9d3;background:#22362c;border-radius:8px;padding:6px 10px;font-size:11px;font-weight:700}
+.catalog-refresh:hover {background:#2a4938}
+.catalog-refresh:disabled {opacity:.45;cursor:default}
+.catalog-explainer {color:#9bb1a7;font-size:11px;margin:-2px 0 0!important;line-height:1.45}
+.catalog-explainer a {color:#acdfbf;text-decoration:underline;text-underline-offset:2px}
+.car-assumptions {margin:9px 0 0;color:#e0cfa9;font-size:11px}
+.car-search-group .search-icon {z-index:2}
+.car-search-group .clear-search {z-index:2}
+
+/* EasyTune 1.4: comparador con pruebas reales opcionales. */
+.car-facts {margin:12px 0 6px;border:1px solid #354d46;border-radius:12px;background:#1b2c2b;color:#d3eadb;padding:0 14px}
+.car-facts>summary {cursor:pointer;list-style:none;padding:12px 0;font-size:12px;font-weight:750;display:flex;align-items:center;gap:6px}
+.car-facts>summary::-webkit-details-marker {display:none}
+.car-facts>summary::before {content:'ⓘ';color:#90e7b4;font-size:15px}
+.car-facts-content {padding-bottom:12px;font-size:12px;line-height:1.55;color:#c0d4cc}
+.car-facts-content>p {margin:5px 0 10px}
+.car-facts-table {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+.car-facts-table>div {border:1px solid #3a574a;border-radius:9px;background:#233932;padding:10px;display:grid;gap:3px}
+.car-facts-table span {color:#a1baaf;font-size:11px}.car-facts-table strong {color:#fff;font-size:16px}.car-facts-table small {font-size:10px;color:#ecce8c}
+.optimizer-panel {border:1px solid #486a56;background:linear-gradient(145deg,#20362e,#182a2c);border-radius:14px;padding:16px;margin:15px 0 20px}
+.optimizer-heading {display:flex;gap:12px;align-items:start;color:#ecfff4}.optimizer-heading>span {font-size:25px}
+.optimizer-heading strong {font-size:17px;letter-spacing:-.4px}.optimizer-heading p {margin:5px 0 0;color:#bfd6c6;font-size:12px;line-height:1.5}
+.optimizer-variants {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:14px 0 10px}
+.optimizer-choice {text-align:left;border:1px solid #456153;background:#1e2c2e;color:#f1f6f3;border-radius:11px;padding:12px;display:flex;flex-direction:column;gap:8px;cursor:pointer;min-width:0}
+.optimizer-choice.active {border:2px solid #8ae3ad;background:#264338;padding:11px}
+.optimizer-choice:hover {background:#2b453a}.optimizer-choice .choice-heading{font-weight:800;font-size:12px;color:#def9e5}
+.optimizer-choice .choice-detail{color:#adcdc1;font-size:11px}.optimizer-choice .choice-detail strong{color:#fff}
+.optimizer-choice .choice-action{font-size:11px;font-weight:750;color:#92e7b3}
+.optimizer-footnote {font-size:11px;line-height:1.5;color:#b7cbbf;margin:7px 0 13px}
+.actual-testing {border-top:1px solid #41594e;padding-top:12px}
+.actual-testing>summary{cursor:pointer;font-size:12px;font-weight:800;color:#e0f1df;list-style:none}
+.actual-testing>summary::-webkit-details-marker{display:none}
+.actual-testing>p{margin:12px 0 9px}
+.actual-testing label{font-size:11px;font-weight:700;color:#d9eade;display:block;margin-bottom:7px}
+.test-input-row{display:flex;gap:8px;align-items:stretch}.test-input-row input{width:140px;max-width:50%;border-radius:8px;padding:9px;border:1px solid #577864;background:#f5f9f5;color:#14291e;font-size:15px}
+.test-input-row .btn{padding:10px 14px;font-size:12px;white-space:nowrap}
+.test-history {margin-top:10px}.test-winner {font-size:12px;padding:10px;border-radius:9px;border:1px solid #5b7a55;background:#29422b;color:#e3f3e4}
+.test-records{display:grid;gap:5px;margin-top:8px}.test-records>div{display:flex;justify-content:space-between;border-bottom:1px solid #40564c;padding:6px 0;font-size:11px;gap:10px}
+.test-use-best{margin-top:10px;font-size:12px!important}
+@media(max-width:650px){.optimizer-variants{grid-template-columns:1fr}.optimizer-choice{gap:3px}.car-facts-table{grid-template-columns:1fr 1fr}}
+
+
+ 
+/* EasyTune v1.7 — sugerencias de piezas, sin presupuesto ni precios. */
+.search-options { position:static!important; left:auto!important; right:auto!important; z-index:auto!important; margin-top:8px!important; box-shadow:none!important; }
+.car-search-group { position:static!important; }
+.build-chooser { margin-top:24px;border:1px solid #40594c;border-radius:16px;padding:19px;background:linear-gradient(135deg,#1a2f2a,#1b252c); }
+.build-chooser h3 { margin:0 0 4px;font-size:18px;letter-spacing:-.3px; }
+.build-chooser .intro {font-size:12px;color:#adc7b8;line-height:1.55;margin-bottom:14px;}
+.build-switch {display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:14px;}
+.build-opt {border:1px solid #4b6155;color:#eff8f2;background:#182521;border-radius:10px;padding:12px;font-size:12px;font-weight:750;min-height:48px;}
+.build-opt.active {border:2px solid var(--accent);background:#274536;color:#eafff1;padding:11px;}
+.build-details[hidden], #upgradeResults[hidden] {display:none!important;}
+.build-details h4 {margin:12px 0 9px;font-size:13px;}
+.build-levels {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;}
+.build-level {border:1px solid #3d584d;background:#172821;border-radius:10px;padding:11px 8px;text-align:left;display:flex;flex-direction:column;gap:4px;min-width:0;color:#edf4ef;}
+.build-level strong {font-size:12px;line-height:1.3;}
+.build-level small {font-size:10px;line-height:1.4;color:#a6bdaf;}
+.build-level.active {border:2px solid var(--accent);background:#2a4b38;padding:10px 7px;}
+.build-check {display:flex;align-items:flex-start;gap:9px;padding:12px 2px 0;color:#d7e5dc;font-size:12px;line-height:1.5;}
+.build-check input {accent-color:#8be6b0;margin-top:2px;flex:none;width:17px;height:17px;}
+.build-help {color:#a7bbaf;font-size:11px;line-height:1.55;margin:9px 0 0;}
+.upgrade-results {border:1px solid #466b54;background:linear-gradient(155deg,#1c3329,#1a2b2c);border-radius:15px;padding:19px;margin:20px 0 23px;}
+.upgrade-top {display:flex;justify-content:space-between;align-items:start;gap:12px;}
+.upgrade-title {font-size:19px;letter-spacing:-.3px;font-weight:800;}
+.upgrade-kicker {font-size:10px;color:#a2d8b4;letter-spacing:1.5px;font-weight:800;display:block;margin-bottom:3px;}
+.upgrade-subtitle {font-size:12px;line-height:1.6;color:#bcd0c2;margin-top:6px;}
+.upgrade-progress {flex:none;font-size:11px;white-space:nowrap;color:#c3efcf;background:#254a35;border:1px solid #416d52;border-radius:100px;padding:7px 9px;}
+.upgrade-part-list {display:grid;gap:9px;margin:15px 0 13px;}
+.upgrade-part {display:flex;align-items:flex-start;gap:12px;border:1px solid #40594c;border-radius:11px;padding:13px;background:#1a2a28;}
+.upgrade-part.is-purchased {opacity:.73;background:#192b23;}
+.upgrade-part input {width:20px;height:20px;accent-color:#8be6b0;margin:3px 0 0;flex:none;cursor:pointer;}
+.upgrade-part-body {min-width:0;flex:1;display:grid;gap:3px;}
+.upgrade-part-top {display:flex;align-items:baseline;justify-content:space-between;gap:8px;}
+.upgrade-part-title {font-size:13px;font-weight:800;line-height:1.35;color:#f4fff7;}
+.upgrade-part.is-purchased .upgrade-part-title {text-decoration:line-through;text-decoration-color:#acd6ba;}
+.upgrade-rank {font-size:10px;color:#91d3a5;white-space:nowrap;font-weight:700;}
+.upgrade-part-category {font-size:10px;color:#90bb9e;font-weight:750;}
+.upgrade-part-reason {font-size:11px;line-height:1.5;color:#b8cac0;}
+.upgrade-more {border-top:1px solid #385548;padding-top:12px;margin-top:5px;}
+.upgrade-more>summary {cursor:pointer;font-size:12px;font-weight:750;color:#d3efdb;}
+.upgrade-more p {font-size:11px;line-height:1.55;color:#b4cbbd;margin:9px 0 0;}
+.upgrade-note {font-size:11px;line-height:1.65;color:#bed7c6;border:1px solid #536d51;border-radius:10px;padding:11px;background:#293b2c;margin-top:12px;}
+.upgrade-link {color:#b2eac1;font-size:11px;line-height:1.7;display:inline-block;margin-top:11px;}
+.result-toolbar {margin-top:12px;}
+@media(max-width:670px){.build-levels{grid-template-columns:1fr}.build-level{flex-direction:row;align-items:center;gap:10px}.build-level small{margin-left:auto;text-align:right}.upgrade-top{flex-direction:column}.upgrade-progress{align-self:flex-start}.upgrade-part-top{flex-direction:column;gap:2px}.build-chooser{padding:15px}}
+</style>
+</head>
+<body>
+  <div class="ambient ambient-1" aria-hidden="true"></div>
+  <div class="ambient ambient-2" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a href="./index.html" class="brand" aria-label="PistaTune, ir al inicio">
+        <span class="brand-icon">P<span class="brand-spark">✦</span></span>
+        <span>pista<span class="brand-accent">tune</span></span>
+        <small>FH6</small>
+      </a>
+      <div class="header-actions">
+        <span class="header-tag">100% gratis · sin IA</span>
+        <button id="openSaves" class="btn ghost" type="button"><span aria-hidden="true">▤</span> <span class="hide-small">Mis </span>guardados <span id="savedCount" class="count" hidden>0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="shell main-shell">
+    <div class="hero">
+      <div class="eyebrow"><span class="indicator"></span> UNA FORMA MÁS SIMPLE DE TUNEAR</div>
+      <h1>Tu auto, <em>a tu manera.</em></h1>
+      <p>Con <strong>PistaTune</strong> elegís tu auto de Forza Horizon 6, decidís qué mejorar y copiás los ajustes. También te recomendamos piezas. <strong>Sin fórmulas complicadas.</strong></p>
+    </div>
+
+    <nav class="steps" aria-label="Pasos de PistaTune">
+      <button class="step active" type="button" id="nav1" data-step="1"><span class="step-num">1</span><span>Tu auto</span></button>
+      <span class="step-link" aria-hidden="true"></span>
+      <button class="step" type="button" id="nav2" data-step="2"><span class="step-num">2</span><span>Tu objetivo</span></button>
+      <span class="step-link" aria-hidden="true"></span>
+      <button class="step" type="button" id="nav3" data-step="3"><span class="step-num">3</span><span>Tu configuración</span></button>
+    </nav>
+
+    <div class="workspace">
+      <div class="main-panel">
+        <section id="step1" class="step-panel" aria-labelledby="step1Heading">
+          <div class="section-topline"><span class="section-kicker">PASO 01 / 03</span><span class="subtle-label">Empezamos por lo fácil</span></div>
+          <h2 id="step1Heading">¿Qué auto tenés?</h2>
+          <p class="section-description">Escribí marca o modelo. Las sugerencias aparecen abajo y nunca tapan lo que estás escribiendo.</p>
+
+          <div class="field-group car-search-group">
+            <label for="carSearch">Buscar tu auto</label>
+            <div class="search-wrap">
+              <span class="search-icon" aria-hidden="true">⌕</span>
+              <input id="carSearch" type="search" placeholder="Ej. Sesto Elemento, Nissan GT-R..." autocomplete="off" autocapitalize="off" spellcheck="false" aria-controls="carOptions" aria-describedby="catalogHint searchFeedback" aria-expanded="false">
+              <button id="clearSearch" type="button" class="clear-search" aria-label="Borrar búsqueda" hidden>×</button>
+            </div>
+            <div id="carOptions" class="search-options" role="listbox" hidden></div>
+            <div class="catalog-bar" id="catalogHint">
+              <div class="catalog-indicator"><span class="catalog-dot" aria-hidden="true"></span><span id="catalogStatus">Cargando catálogo…</span> <span class="input-hint">(<strong id="catalogCount">0</strong> autos)</span></div>
+              <button type="button" id="updateCatalog" class="catalog-refresh" aria-label="Actualizar el catálogo de autos">↻ Actualizar</button>
+            </div>
+            <p class="catalog-explainer">¿No encontrás tu auto? Escribilo igual y continuá. <a href="https://forza.net/fh6cars" target="_blank" rel="noopener noreferrer">Ver lista oficial ↗</a></p>
+            <div id="searchFeedback" class="search-feedback" role="status" aria-live="polite" hidden></div>
+          </div>
+
+          <div id="selectedCar" class="selected-car" aria-live="polite">
+            <div class="car-thumbnail"><span aria-hidden="true">🏎️</span></div>
+            <div class="selected-car-info">
+              <span class="selected-eyebrow">AUTO SELECCIONADO</span>
+              <strong id="selectedCarTitle">Lamborghini Sesto Elemento</strong>
+              <small id="selectedCarMeta">2011 · Extreme Track Toys · S2 871</small>
+            </div>
+            <span class="verified-label" title="Modelo y clase contrastados con el catálogo oficial; estadísticas mecánicas estimadas">✓ Catálogo</span>
+          </div>
+
+          <details id="carFacts" class="car-facts">
+            <summary>¿PistaTune conoce el peso y la potencia de este auto?</summary>
+            <div id="carFactsContent" class="car-facts-content"></div>
+          </details>
+
+          <div id="manualCarPanel" class="manual-car-panel" hidden>
+            <div class="notice inline-notice">No hace falta que tu auto esté en la lista. Poné su nombre y elegí su tipo; los números serán una estimación inicial.</div>
+            <div class="field-group">
+              <label for="customName">Marca y modelo</label>
+              <input id="customName" type="text" placeholder="Ej. Mi auto preparado" maxlength="100">
+            </div>
+            <div class="field-group">
+              <label for="customProfile">¿Qué tipo de auto es?</label>
+              <select id="customProfile">
+                <option value="sport">Deportivo normal</option>
+                <option value="super">Superdeportivo</option>
+                <option value="track">Auto de circuito</option>
+                <option value="hyper">Hiperdeportivo</option>
+                <option value="muscle">Muscle car / potente y pesado</option>
+                <option value="hatch">Hatchback / compacto</option>
+                <option value="rally">Rally</option>
+                <option value="offroad">Todoterreno</option>
+                <option value="electric">Eléctrico</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="under-search-actions">
+            <button type="button" class="link-button" id="manualSwitch">+ Agregar un auto que no aparece</button>
+            <button type="button" class="link-button" id="googleSearch">↗ Buscar datos en Google</button>
+          </div>
+
+          <div class="simple-settings">
+            <div class="settings-head">
+              <h3>Dos datos importantes</h3>
+              <span class="mini-tag">Podés cambiarlos</span>
+            </div>
+            <div class="settings-grid">
+              <div class="field-group"><label for="drive">¿Qué ruedas impulsan el auto?</label>
+                <select id="drive"><option value="AWD">Las cuatro (4x4)</option><option value="RWD">Las traseras</option><option value="FWD">Las delanteras</option></select>
+              </div>
+              <div class="field-group"><label for="gears">¿Cuántas marchas tiene?</label>
+                <select id="gears"><option>1</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select>
+              </div>
+            </div>
+            <p class="small-note car-assumptions" id="carAssumptions" hidden>Para este auto no conocemos las marchas ni la tracción exactas. Dejamos una estimación inicial: corregilas si en tu juego son distintas.</p>
+          </div>
+
+          <details id="extrasDetails" class="extras">
+            <summary><span class="summary-icon">＋</span> ¿Le cambiaste el motor, neumáticos o suspensión? <span class="summary-right">Opcional</span></summary>
+            <div class="extras-content">
+              <p class="small-note">Si no sabés algún dato, dejalo vacío. Usaremos una estimación para ese tipo de auto, marcada como tal en el resultado.</p>
+              <div class="settings-grid">
+                <div class="field-group"><label for="power">Potencia actual (CV)</label><input type="number" id="power" min="30" max="2500" placeholder="Estimación automática" step="1"></div>
+                <div class="field-group"><label for="mass">Peso actual (kg)</label><input type="number" id="mass" min="450" max="5000" placeholder="Estimación automática" step="1"></div>
+                <div class="field-group"><label for="front">Peso delante (%)</label><input type="number" id="front" min="28" max="75" placeholder="Estimación automática" step="1"></div>
+                <div class="field-group"><label for="rpm">RPM máximas (corte)</label><input type="number" id="rpm" min="3000" max="20000" placeholder="Estimación automática" step="100"></div>
+                <div class="field-group"><label for="radius">Radio aprox. rueda (m)</label><input type="number" id="radius" min="0.24" max="0.55" placeholder="Estimación automática" step="0.005"></div>
+                <div class="field-group"><label for="tire">Tipo de neumáticos</label>
+                  <select id="tire"><option value="sport">Deportivos</option><option value="street">De calle</option><option value="race">De competición</option><option value="rally">Rally</option><option value="offroad">Todoterreno</option><option value="drift">Drift</option></select>
+                </div>
+              </div>
+              <p class="subheading">¿Qué partes regulables instalaste?</p>
+              <div class="toggle-grid">
+                <label><input type="checkbox" id="hasSusp"> Suspensión regulable</label>
+                <label><input type="checkbox" id="hasAero"> Aerodinámica regulable</label>
+                <label><input type="checkbox" id="hasBrakes"> Frenos regulables</label>
+                <label><input type="checkbox" id="hasDiff"> Diferencial regulable</label>
+                <label><input type="checkbox" id="hasBars"> Barras estabilizadoras regulables</label>
+                <label><input type="checkbox" id="hasGear"> Caja de carreras regulable</label>
+              </div>
+              <details class="range-details">
+                <summary>Quiero números exactos de muelles y altura</summary>
+                <p class="small-note">Cada auto y pieza tiene sus propios límites. Escribí el mínimo y el máximo que ves en el juego; la calculadora ubicará el valor sugerido entre ambos. Unidades: kgf/mm para muelles y cm para altura.</p>
+                <div class="range-grid">
+                  <span></span><strong>Mínimo</strong><strong>Máximo</strong>
+                  <label for="springFMin">Muelle delantero</label><input id="springFMin" type="number" min="0" step="0.1" placeholder="—"><input id="springFMax" type="number" min="0" step="0.1" placeholder="—" aria-label="Máximo muelle delantero">
+                  <label for="springRMin">Muelle trasero</label><input id="springRMin" type="number" min="0" step="0.1" placeholder="—"><input id="springRMax" type="number" min="0" step="0.1" placeholder="—" aria-label="Máximo muelle trasero">
+                  <label for="heightFMin">Altura delantera</label><input id="heightFMin" type="number" min="0" step="0.1" placeholder="—"><input id="heightFMax" type="number" min="0" step="0.1" placeholder="—" aria-label="Máximo altura delantera">
+                  <label for="heightRMin">Altura trasera</label><input id="heightRMin" type="number" min="0" step="0.1" placeholder="—"><input id="heightRMax" type="number" min="0" step="0.1" placeholder="—" aria-label="Máximo altura trasera">
+                </div>
+              </details>
+            </div>
+          </details>
+
+          <div class="panel-bottom"><span>Sin cuenta, sin pagos, sin IA.</span><button id="step1Next" type="button" class="btn primary">Elegir cómo tunear <span aria-hidden="true">→</span></button></div>
+        </section>
+
+        <section id="step2" class="step-panel" aria-labelledby="step2Heading" hidden>
+          <div class="section-topline"><span class="section-kicker">PASO 02 / 03</span><span class="subtle-label">Elegí lo que te gusta</span></div>
+          <h2 id="step2Heading">¿Qué querés mejorar?</h2>
+          <p class="section-description">No necesitás saber qué es la convergencia o un diferencial. Elegí cómo querés que se sienta tu auto.</p>
+          <div id="modeGrid" class="mode-grid" role="radiogroup" aria-label="Estilo de conducción"></div>
+
+          <section class="build-chooser" aria-labelledby="buildTitle">
+            <h3 id="buildTitle">🔧 ¿Querés mejorar las piezas también?</h3>
+            <p class="intro">Además de los números del tuneo, PistaTune te dice qué comprar en el taller, de lo más útil a lo menos urgente.</p>
+            <div class="build-switch" role="group" aria-label="Recomendaciones de piezas">
+              <button type="button" class="build-opt active" data-build-enabled="yes" aria-pressed="true">Sí, decime qué comprar</button>
+              <button type="button" class="build-opt" data-build-enabled="no" aria-pressed="false">No, solo los ajustes</button>
+            </div>
+            <div id="buildDetails" class="build-details">
+              <h4>¿Qué tipo de preparación querés?</h4>
+              <div class="build-levels" role="group" aria-label="Nivel de preparación">
+                <button class="build-level" type="button" data-build-level="basic" aria-pressed="false"><strong>🪙 Pocas piezas</strong><small>Empezar con lo esencial</small></button>
+                <button class="build-level active" type="button" data-build-level="balanced" aria-pressed="true"><strong>🏁 Competitiva</strong><small>Buena para correr</small></button>
+                <button class="build-level" type="button" data-build-level="max" aria-pressed="false"><strong>🚀 Muy preparada</strong><small>Más cambios y potencia</small></button>
+              </div>
+              <label class="build-check"><input id="keepClass" type="checkbox" checked><span>Prefiero conservar la clase del auto (B, A, S1, S2...).</span></label>
+              <p class="build-help">PistaTune recomienda las mejoras más útiles. Antes de instalarlas, comprobá los puntos PI que muestra Forza para no superar la clase que querés mantener.</p>
+            </div>
+          </section>
+          <details class="extras compact-extra">
+            <summary><span class="summary-icon">＋</span> Quiero ajustar cuánto gira el auto <span class="summary-right">Avanzado</span></summary>
+            <div class="extras-content">
+              <div class="bias-labels"><span>Más estable</span><strong id="biasValue">Equilibrado</strong><span>Más ágil / cola suelta</span></div>
+              <input type="range" id="bias" min="-5" max="5" value="0" step="1" aria-label="Balance entre estabilidad y agilidad">
+              <p class="small-note">Ajusta barras, diferencial y frenos. No representa una mejora garantizada.</p>
+            </div>
+          </details>
+          <div class="panel-bottom"><button id="step2Back" type="button" class="btn outline">← Volver</button><button id="step2Next" type="button" class="btn primary">Ver mi configuración <span aria-hidden="true">→</span></button></div>
+        </section>
+
+        <section id="step3" class="step-panel" aria-labelledby="step3Heading" hidden>
+          <div class="section-topline"><span class="section-kicker">PASO 03 / 03</span><span class="subtle-label">Tu tuneo, explicado fácil</span></div>
+          <div class="result-header"><div><h2 id="step3Heading">¡Ya tenés una base!</h2><p class="section-description" id="resultFor">Lamborghini Sesto Elemento · Bueno en todo</p></div><span class="result-pill">✦ Hecho para vos</span></div>
+          <div class="honesty-banner"><span class="honesty-icon">ⓘ</span><div><strong>Punto de partida estimado, no récord mundial.</strong><p>Se calcula con reglas y datos de referencia. Para encontrar el mejor tuneo hay que probarlo en Forza. Los números basados en rangos que ingresaste tampoco están verificados por telemetría.</p></div></div>
+          <div id="sourceWarning" class="source-warning"></div>
+
+          <section id="upgradeResults" class="upgrade-results" aria-label="Recomendaciones de piezas para comprar" hidden>
+            <div class="upgrade-top"><div><span class="upgrade-kicker">PRIMERO · COMPRAS EN EL TALLER</span><div class="upgrade-title">Qué piezas comprar</div></div><span class="upgrade-progress" id="upgradeProgress">0 compradas</span></div>
+            <p class="upgrade-subtitle" id="upgradeIntro">Recomendaciones aproximadas según tu auto y el objetivo elegido.</p>
+            <div id="upgradePartList" class="upgrade-part-list"></div>
+            <details class="upgrade-more"><summary>¿Qué cosas NO conviene comprar todavía?</summary><div id="upgradeAvoid"></div></details>
+            <p class="upgrade-note">⚠️ <strong>Esto es una lista orientativa, no una cesta de compra real.</strong> Algunas piezas podrían no estar disponibles para tu auto y cada una cambia los puntos PI. Después de instalarlas, revisá el peso y la potencia que muestra el juego y actualizalos en «Tu auto» para recalcular los ajustes.</p>
+            <a class="upgrade-link" href="https://forza.net/fh6engines" target="_blank" rel="noopener noreferrer">Consultar cambios de motor oficiales ↗</a>
+          </section>
+          <div class="optimizer-panel" id="optimizerPanel">
+            <div class="optimizer-heading"><span aria-hidden="true">🔎</span><div><strong id="optimizerHeadline">Comparamos alternativas</strong><p id="optimizerExplanation">Evaluación matemática inicial, no tiempos reales del juego.</p></div></div>
+            <div id="optimizerVariants" class="optimizer-variants" role="group" aria-label="Configuraciones de transmisión comparadas"></div>
+            <p class="optimizer-footnote">La comparación automática se centra en las <strong>relaciones de marcha</strong>. Neumáticos y suspensión siguen siendo recomendaciones iniciales, no ajustes medidos.</p>
+            <details id="actualTesting" class="actual-testing">
+              <summary>🏁 ¿Cuál gana de verdad? Compará tus pruebas (opcional)</summary>
+              <p class="small-note">Usá el mismo auto y las mismas condiciones. Probá cada opción en el juego y anotá el resultado. Así elegimos según tus mediciones, no solo nuestras fórmulas.</p>
+              <label for="testValue" id="testValueLabel">Tiempo de 0 a 100 km/h (segundos)</label>
+              <div class="test-input-row"><input id="testValue" type="number" min="0.1" step="0.01" inputmode="decimal" placeholder="Ej. 3,45"><button type="button" id="saveTest" class="btn outline">Guardar prueba</button></div>
+              <div id="testHistory" class="test-history"></div>
+            </details>
+          </div>
+          <div class="result-actions">
+            <button id="copyAll" class="btn primary" type="button">▢ Copiar todos los valores</button>
+            <button id="saveTune" class="btn outline" type="button">♡ Guardar</button>
+            <button id="downloadTune" class="btn outline" type="button">↓ Descargar TXT</button>
+          </div>
+          <div class="result-toolbar"><div><strong>Después · Copiá los ajustes del tuneo</strong><small>Abrí cada sección y copiá sus valores.</small></div><button type="button" class="link-button" id="toggleAll">Abrir todas</button></div>
+          <div id="resultsList" class="results-list"></div>
+          <div class="bottom-advice"><strong>¿El auto no se siente bien?</strong> Cambiá solo un ajuste por vez y compará en el mismo recorrido. Cuando tengamos telemetría, podremos medir las mejoras de verdad.</div>
+          <div class="panel-bottom"><button id="step3Back" type="button" class="btn outline">← Cambiar objetivo</button><button id="restart" type="button" class="btn primary">Tunear otro auto ↗</button></div>
+        </section>
+      </div>
+
+      <aside class="sidebar" aria-label="Resumen y ayuda">
+        <div class="side-card side-summary"><span class="side-eyebrow">TU GARAJE</span><div class="car-illustration" aria-hidden="true"><svg viewBox="0 0 390 145" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="carGradient" x1="30" y1="30" x2="340" y2="105" gradientUnits="userSpaceOnUse"><stop stop-color="#b5f5c6"/><stop offset="1" stop-color="#5de59a"/></linearGradient></defs><path d="M45 102L59 78L113 68L148 34L250 34L292 71L339 78L357 100L354 118L38 118Z" fill="url(#carGradient)" fill-opacity=".25" stroke="#9eeabf" stroke-width="2"/><path d="M129 69L160 42L243 42L276 72L129 69Z" fill="#1a3231" stroke="#b6f6ce" stroke-width="1.5"/><path d="M114 73L128 70M279 74L306 79M45 101H350" stroke="#ceffe0" stroke-width="2" stroke-linecap="round"/><circle cx="104" cy="115" r="22" fill="#131a20" stroke="#75e6a1" stroke-width="4"/><circle cx="104" cy="115" r="8" fill="#415e55"/><circle cx="289" cy="115" r="22" fill="#131a20" stroke="#75e6a1" stroke-width="4"/><circle cx="289" cy="115" r="8" fill="#415e55"/></svg></div><strong id="sideCarName">Lamborghini Sesto Elemento</strong><small id="sideCarMeta">2011 · S2 871</small><div class="side-divider"></div><span class="side-eyebrow">MODO ELEGIDO</span><div class="side-mode"><span id="sideModeIcon">⚖️</span><span id="sideModeName">Bueno en todo</span></div><small id="sideModeDesc">Un equilibrio para carreras normales.</small></div>
+        <div class="side-card side-help"><div class="help-icon">?</div><strong>¿Y si no entiendo los números?</strong><p>Te decimos dónde va cada uno. Si algo no está disponible en tu auto, seguramente tenés que instalar una pieza regulable.</p><a href="https://forza.net/fh6cars" target="_blank" rel="noopener noreferrer">Ver catálogo oficial de Forza ↗</a></div>
+        <div class="side-card side-transparency"><span>✓ No usamos IA</span><span>✓ No hay publicidad</span><span>✓ Guardados en este navegador</span><span>✓ Los límites desconocidos se muestran como %</span></div>
+      </aside>
+    </div>
+
+    <footer class="footer"><span>PistaTune v1.8 · Primer prototipo funcional · No afiliado con Forza o Xbox.</span><span>Las configuraciones son sugerencias iniciales; no sustituyen pruebas en pista.</span></footer>
+  </main>
+
+  <dialog id="savesDialog" class="saves-dialog" aria-labelledby="dialogHeading">
+    <div class="dialog-header"><div><span class="section-kicker">MIS CONFIGURACIONES</span><h2 id="dialogHeading">Tu garaje guardado</h2></div><button type="button" id="closeSaves" class="icon-btn" aria-label="Cerrar">✕</button></div>
+    <p class="small-note">Se guardan solamente en este navegador. Si borrás los datos del navegador, pueden desaparecer.</p>
+    <div id="savedItems" class="saved-items"></div>
+    <div class="dialog-footer"><button id="exportSaves" class="btn outline" type="button">↓ Exportar respaldo JSON</button><button type="button" id="dialogCloseBottom" class="btn primary">Cerrar</button></div>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <noscript><div class="no-js">Para usar la calculadora, activá JavaScript en tu navegador. No usa ninguna conexión de IA.</div></noscript>
+<script>
+/* Catálogo inicial curado a partir de https://forza.net/fh6cars (noviembre de 2026).
+ * La clase/PI es la publicada para el vehículo original; no representa sus mejoras.
+ * Las especificaciones mecánicas se ESTIMAN por arquetipo, no se extraen de Forza.
+ */
+window.EASYTUNE_CARS = [
+  ['Lamborghini','Sesto Elemento',2011,'S2 871','Extreme Track Toys','AWD',6,'track'],
+  ['Lamborghini','Huracán LP 610-4',2014,'S1 738','Modern Supercars','AWD',7,'super'],
+  ['Lamborghini','Huracán EVO',2020,'S1 761','Modern Supercars','AWD',7,'super'],
+  ['Lamborghini','Huracán STO',2020,'S1 783','Track Toys','RWD',7,'track'],
+  ['Lamborghini','Aventador LP700-4',2012,'S1 753','Hypercars','AWD',7,'hyper'],
+  ['Lamborghini','Revuelto',2024,'S2 829','Hypercars','AWD',8,'hyper'],
+  ['Lamborghini','Diablo SV',1997,'A 649','Retro Supercars','RWD',5,'super'],
+  ['Ferrari','488 Pista',2019,'S2 803','Track Toys','RWD',7,'track'],
+  ['Ferrari','F8 Tributo',2019,'S2 802','Modern Supercars','RWD',7,'super'],
+  ['Ferrari','LaFerrari',2013,'S2 857','Hypercars','RWD',7,'hyper'],
+  ['Ferrari','SF90 Stradale',2020,'S2 851','Hypercars','AWD',8,'hyper'],
+  ['Ferrari','F40',1987,'A 678','Retro Supercars','RWD',5,'super'],
+  ['McLaren','F1',1993,'S1 713','Retro Supercars','RWD',6,'super'],
+  ['McLaren','P1',2013,'S2 848','Hypercars','RWD',7,'hyper'],
+  ['McLaren','765LT Coupé',2021,'S2 829','Track Toys','RWD',7,'track'],
+  ['Porsche','911 GT3 RS',2019,'S1 760','Track Toys','RWD',7,'track'],
+  ['Porsche','911 GT3 RS',2023,'S1 758','Track Toys','RWD',7,'track'],
+  ['Porsche','911 GT2 RS',2018,'S2 803','Track Toys','RWD',7,'track'],
+  ['Porsche','918 Spyder',2014,'S2 858','Hypercars','AWD',7,'hyper'],
+  ['Porsche','911 Carrera S',2019,'S1 714','Modern Sports Cars','RWD',8,'sport'],
+  ['Nissan','Skyline GT-R V Spec II',2000,'B 590','Retro Sports Cars','AWD',6,'sport'],
+  ['Nissan','Skyline GT-R',1992,'B 541','Retro Sports Cars','AWD',5,'sport'],
+  ['Nissan','GT-R (R35)',2017,'S1 709','Modern Supercars','AWD',6,'super'],
+  ['Nissan','GT-R NISMO (R35)',2020,'S1 736','Track Toys','AWD',6,'track'],
+  ['Nissan','Silvia Spec-R',2002,'B 551','Retro Sports Cars','RWD',6,'sport'],
+  ['Toyota','Supra RZ',1998,'B 529','Retro Sports Cars','RWD',6,'sport'],
+  ['Toyota','GR Supra',2020,'A 616','Modern Sports Cars','RWD',8,'sport'],
+  ['Toyota','GR Yaris',2021,'B 558','Modern Rally','AWD',6,'rally'],
+  ['Toyota','GR Corolla',2023,'B 596','Super Hot Hatch','AWD',6,'hatch'],
+  ['Toyota','Sprinter Trueno GT Apex',1985,'D 376','Retro Sports Cars','RWD',5,'sport'],
+  ['Toyota','GR86',2022,'B 556','Modern Sports Cars','RWD',6,'sport'],
+  ['Subaru','IMPREZA WRX STI',2005,'B 570','Modern Rally','AWD',6,'rally'],
+  ['Subaru','Impreza 22B-STi Version',1998,'B 600','Retro Rally','AWD',5,'rally'],
+  ['Subaru','WRX',2022,'B 538','Modern Rally','AWD',6,'rally'],
+  ['Subaru','BRZ',2022,'B 551','Modern Sports Cars','RWD',6,'sport'],
+  ['Mazda','MX-5',2016,'C 499','Modern Sports Cars','RWD',6,'sport'],
+  ['Mazda','MX-5 Miata RF',2022,'B 509','Modern Sports Cars','RWD',6,'sport'],
+  ['BMW','M3',1988,'C 474','Retro Super Saloons','RWD',5,'sport'],
+  ['BMW','M3',2008,'A 608','Modern Super Saloons','RWD',6,'sport'],
+  ['Ford','Mustang GT',2024,'A 628','Modern Muscle','RWD',6,'muscle'],
+  ['Ford','Mustang Dark Horse',2024,'A 669','Modern Muscle','RWD',6,'muscle'],
+  ['Ford','RS200 Evolution',1985,'S1 710','Rally Monsters','AWD',5,'rally'],
+  ['Dodge','Challenger SRT Demon',2018,'A 678','Modern Muscle','RWD',8,'muscle'],
+  ['Dodge','Charger Daytona HEMI',1969,'C 479','Classic Muscle','RWD',4,'muscle'],
+  ['Honda','Civic Type R',2018,'A 608','Super Hot Hatch','FWD',6,'hatch'],
+  ['Honda','Civic Type R',2023,'A 620','Super Hot Hatch','FWD',6,'hatch'],
+  ['Volkswagen','Golf R',2022,'B 548','Super Hot Hatch','AWD',7,'hatch'],
+  ['Pagani','Zonda R',2009,'R 918','Extreme Track Toys','RWD',6,'track'],
+  ['Pagani','Huayra BC Coupe',2016,'S2 851','Hypercars','RWD',7,'hyper'],
+  ['Rimac','Nevera',2021,'R 913','Hypercars','AWD',1,'electric'],
+  ['Chevrolet','Corvette Z06',2023,'S1 763','Track Toys','RWD',8,'track'],
+  ['Chevrolet','Corvette Stingray Coupe',2020,'A 700','Modern Supercars','RWD',8,'super'],
+  ['Land Rover','Defender 110 X',2020,'C 427','Sports Utility Heroes','AWD',8,'offroad'],
+  ['Ram','1500 TRX',2024,'B 514','Pickups & 4x4\'s','AWD',8,'offroad'],
+].map(([make,model,year,pi,category,drive,gears,profile],i) => ({
+  id: 'car-'+i, make, model, year, pi, category, drive, gears, profile,
+  label: `${make} ${model} · ${year}`
+}));
+
+</script>
+<script>
+/* EasyTune catalog adapter. Downloads only published car *names*, classes and types.
+ * No AI, no Google scraping, no mechanical specifications inferred from a webpage.
+ * Local base catalogue always works offline. A successful sync is cached for offline use.
+ */
+(function (root) {
+  'use strict';
+  const BASE = root.EASYTUNE_CARS || [];
+  const CACHE_KEY = 'easytune.fh6.catalog.2026.v2';
+  const OFFICIAL = 'https://forza.net/fh6cars';
+  const COMMUNITY = 'https://raw.githubusercontent.com/StevenGPL/Forza-Horizon-6-Online-Car-List/main/Cars.json';
+  const MIRROR = 'https://cdn.jsdelivr.net/gh/StevenGPL/Forza-Horizon-6-Online-Car-List@main/Cars.json';
+  const clean = x => String(x == null ? '' : x).replace(/\s+/g, ' ').trim();
+  const normalize = x => clean(x).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  const key = c => [c.make, c.model, c.year].map(normalize).join('|').replace(/[\s\u2010-\u2015\-]/g,'');
+  const inferProfile = category => {
+    const c=normalize(category);
+    if(/rally|retro rally|offroad race/.test(c))return 'rally';
+    if(/extreme track|track toys|racer|time attack/.test(c))return 'track';
+    if(/hypercar/.test(c))return 'hyper';
+    if(/supercar|super cars|super gt/.test(c))return 'super';
+    if(/muscle|rod|custom/.test(c))return 'muscle';
+    if(/hatch|domestic|cult car/.test(c))return 'hatch';
+    if(/pickup|offroad|off-road|bugg|suv|utility|truck|utv/.test(c))return 'offroad';
+    return 'sport';
+  };
+  const guessDrive = (p,cat) => {
+    if (p === 'offroad' || p === 'rally') return 'AWD';
+    if (p === 'hatch') return 'FWD';
+    return 'RWD';
+  };
+  const guessGears = (year,cat) => /electri/i.test(cat)?1:year>=2014?7:year>=2000?6:year>=1980?5:4;
+  function fromFields(make, model, year, pi, category, source) {
+    make=clean(make);model=clean(model);year=Number(year);pi=clean(pi);category=clean(category);
+    if (!make || !model || !Number.isInteger(year) || year<1880 || year>2700 || !category) return null;
+    if (normalize(model).startsWith(normalize(make)+' ')) model=model.slice(make.length).trim();
+    const performance=/^(\d{1,4})\s+(D|C|B|A|S1|S2|R)$/i.exec(pi);
+    if(performance)pi=performance[2].toUpperCase()+' '+performance[1];
+    const profile=inferProfile(category);
+    const item={make,model,year,pi:pi||'Clase por confirmar',category,profile,
+      drive:guessDrive(profile,category),gears:guessGears(year,category),catalogSource:source,
+      isEstimatedDrivetrain:true};
+    item.id='fh6-'+key(item).replace(/[^a-z0-9|]/gi,'').replace(/\|/g,'-');
+    item.label=`${make} ${model} · ${year}`;
+    return item;
+  }
+  function parseOfficial(html) {
+    const doc=new DOMParser().parseFromString(html,'text/html');
+    const result=[];
+    for(const tr of doc.querySelectorAll('table tbody tr, table tr')) {
+      const cells=Array.from(tr.querySelectorAll('td')).map(td=>clean(td.textContent));
+      if(cells.length<4)continue;
+      const [make, fullName,category,pi]=cells;
+      const m=/^(\d{4})\s+(.+)$/.exec(fullName);
+      if(!m)continue;
+      result.push(fromFields(make,m[2],m[1],pi,category,'oficial'));
+    }
+    return result.filter(Boolean);
+  }
+  function parseCommunity(json) {
+    const data=Array.isArray(json)?json:Array.isArray(json.cars)?json.cars:[];
+    return data.map(x=>{
+      const make=clean(String(x.brand||x.make||'').split('\n')[0]);
+      const year=Number(x.year || (String(x.name||'').match(/(?:19|20|25)\d{2}$/)||[])[0]);
+      const model=clean(x.name||x.model||'').replace(new RegExp('\\s+'+year+'$'), '');
+      return fromFields(make,model,year,x.initial_score||x.pi||'',x.car_type_en||x.category||'Deportivo','comunitario');
+    }).filter(Boolean);
+  }
+  function merge(incoming) {
+    const existing=new Map(BASE.map(c=>[key(c),c]));
+    let added=0;
+    for(const car of incoming){
+      const k=key(car);
+      if(existing.has(k)) {
+        const old=existing.get(k);
+        if(old.catalogSource==='comunitario' && car.catalogSource==='oficial') {
+          old.pi=car.pi;old.category=car.category;old.catalogSource='oficial';
+        }
+        continue;
+      }
+      existing.set(k,car);BASE.push(car);added++;
+    }
+    BASE.sort((a,b)=>a.make.localeCompare(b.make,'es') || a.model.localeCompare(b.model,'es') || a.year-b.year);
+    return added;
+  }
+  function cacheRead(){
+    try {
+      const cached=JSON.parse(localStorage.getItem(CACHE_KEY)||'null');
+      if(!cached || !Array.isArray(cached.cars) || cached.cars.length<100)return null;
+      // Untrusted cache must not overwrite app behavior.
+      const records=cached.cars.slice(0,1500).map(c=>fromFields(c.make,c.model,c.year,c.pi,c.category,c.catalogSource||'comunitario')).filter(Boolean);
+      if(records.length<100)return null;
+      merge(records);
+      return {count:BASE.length,source:cached.source||'caché',date:cached.date};
+    }catch{return null;}
+  }
+  async function getWithTimeout(url,expect){
+    const controller=new AbortController();const timer=setTimeout(()=>controller.abort(),7500);
+    try{
+      const res=await fetch(url,{mode:'cors',signal:controller.signal,cache:'no-cache'});
+      if(!res.ok)throw new Error('HTTP '+res.status);
+      return expect==='html'?await res.text():await res.json();
+    }finally{clearTimeout(timer);}
+  }
+  async function loadOnline() {
+    let source='oficial',data=[];
+    try { data=parseOfficial(await getWithTimeout(OFFICIAL,'html')); } catch(e) { /* CORS del sitio oficial puede impedir leer su tabla */ }
+    if(data.length<500) {
+      source='comunitario';
+      for(const url of [COMMUNITY,MIRROR]) {
+        try { data=parseCommunity(await getWithTimeout(url,'json')); if(data.length>=500)break; } catch(e) { data=[]; }
+      }
+    }
+    if(data.length<500)throw Error('No se pudo consultar una lista suficientemente completa.');
+    const added=merge(data);
+    try { localStorage.setItem(CACHE_KEY,JSON.stringify({date:new Date().toISOString(),source,
+      cars:data.map(({make,model,year,pi,category,catalogSource})=>({make,model,year,pi,category,catalogSource}))}));}catch{};
+    return {added,count:BASE.length,source,date:new Date().toISOString()};
+  }
+  root.EasyTuneCatalog = { cacheRead,loadOnline,parseOfficial,parseCommunity,merge,inferProfile,OFFICIAL,COMMUNITY };
+})(window);
+
+</script>
+<script>
+/* EasyTune: motor determinista ORIGINAL de heurísticas para puntos de partida.
+ * No afirma usar un modelo físico calibrado ni encontrar el óptimo. Sin IA ni red.
+ * License: MIT (código de la demo EasyTune).
+ */
+(function(root, factory) {
+  const api = factory();
+  if (typeof module === 'object' && module.exports) module.exports = api;
+  root.EasyTuneEngine = api;
+})(typeof window !== 'undefined' ? window : globalThis, function(){
+  'use strict';
+  const clamp = (v,min,max) => Math.max(min, Math.min(max,v));
+  const round = (v,dp=0) => { const k=10**dp; return Math.round((v+Number.EPSILON)*k)/k; };
+  const MODES={
+    balance:{id:'balance',label:'Bueno en todo',emoji:'⚖️',short:'Equilibrio para carreras',description:'Un poco de aceleración, velocidad y agarre.',pro:'Útil para la mayoría de las carreras.',con:'No maximiza una sola cosa.',target:320,bar:0,camber:0,rate:0,downforce:0.5,pressure:0,lock:0},
+    accel:{id:'accel',label:'Acelerar muchísimo',emoji:'⚡',short:'Salidas rápidas y recuperación',description:'Para priorizar 0–100 y 0–200 km/h.',pro:'Marchas más cortas y tracción al salir.',con:'La velocidad máxima puede bajar.',target:265,bar:-2,camber:0.35,rate:-0.18,downforce:0.08,pressure:-0.06,lock:7},
+    speed:{id:'speed',label:'Correr más rápido',emoji:'🚀',short:'Velocidad punta',description:'Para rectas largas y autopistas.',pro:'Marchas largas y menos carga aerodinámica.',con:'Menos respuesta al acelerar y doblar.',target:385,bar:0,camber:0.40,rate:0.05,downforce:0,pressure:0.08,lock:-6},
+    grip:{id:'grip',label:'Doblar mejor',emoji:'🧲',short:'Agarre en curvas',description:'Para curvas rápidas sin irte de costado.',pro:'Más control lateral y estabilidad.',con:'Puede perder velocidad punta.',target:295,bar:2,camber:-0.5,rate:0.12,downforce:0.9,pressure:-0.03,lock:-2},
+    technical:{id:'technical',label:'Circuito con curvas',emoji:'🏁',short:'Curvas cerradas y frenadas',description:'Para caminos trabados donde frenás y acelerás seguido.',pro:'Agilidad y salida de curva.',con:'Menos pensado para autopistas.',target:270,bar:1,camber:-0.4,rate:0.02,downforce:0.7,pressure:-0.04,lock:0},
+    drift:{id:'drift',label:'Derrapar fácil',emoji:'💨',short:'Drift controlado',description:'Para poner el auto de costado.',pro:'Facilita iniciar y mantener derrapes.',con:'No sirve para lograr el mejor tiempo de vuelta.',target:250,bar:5,camber:-0.25,rate:0.2,downforce:0,pressure:0.22,lock:32},
+    offroad:{id:'offroad',label:'Tierra y saltos',emoji:'⛰️',short:'Rally y todoterreno',description:'Para caminos irregulares, grava y tierra.',pro:'Suspensión más suave y mejor contacto en baches.',con:'Peor respuesta en asfalto liso.',target:235,bar:-8,camber:0.3,rate:-0.36,downforce:0.15,pressure:-0.23,lock:9}
+  };
+  const PROFILES={
+    track:{mass:1170,power:620,front:43,rpm:8200,radius:0.335},
+    hyper:{mass:1550,power:780,front:43,rpm:8000,radius:0.345},
+    super:{mass:1450,power:540,front:44,rpm:7800,radius:0.34},
+    sport:{mass:1400,power:290,front:51,rpm:7000,radius:0.325},
+    muscle:{mass:1770,power:480,front:54,rpm:6600,radius:0.345},
+    rally:{mass:1330,power:350,front:56,rpm:7400,radius:0.325},
+    hatch:{mass:1420,power:300,front:60,rpm:6800,radius:0.32},
+    offroad:{mass:2130,power:390,front:55,rpm:6300,radius:0.38},
+    electric:{mass:2150,power:900,front:49,rpm:14000,radius:0.35}
+  };
+  const COMPOUNDS={street:0.11,sport:0.03,race:0,rally:-0.12,offroad:-0.20,drift:0.17};
+  const pct = v => `${Math.round(v)}% del deslizador`;
+  function deriveProfile(car){
+    const profile=(car && car.profile) || 'sport';
+    // Preset del Sesto solo como referencia para facilitar la demo: no datos medidos in-game.
+    if(car && car.make==='Lamborghini' && car.model==='Sesto Elemento')
+      return {mass:1000,power:570,front:43,rpm:8500,radius:0.335};
+    return {...(PROFILES[profile]||PROFILES.sport)};
+  }
+  function parseNumeric(raw, fallback, lower, upper) {
+    const x=(typeof raw==='string')?Number(raw.replace(',','.')):Number(raw);
+    return Number.isFinite(x) && x>0 ? clamp(x,lower,upper):fallback;
+  }
+  function resolveSpecs(input){
+    const preset=deriveProfile(input.car);
+    const custom={...input};
+    return {
+      carName: input.name || input.car?.label || 'Auto personalizado',
+      profile:input.car?.profile || input.profile || 'sport',
+      drive: ['AWD','RWD','FWD'].includes(input.drive) ? input.drive : (input.car?.drive || 'RWD'),
+      gears:Math.round(parseNumeric(input.gears, input.car?.gears || 6, 1, 10)),
+      mass:parseNumeric(custom.mass,preset.mass,450,5000),
+      power:parseNumeric(custom.power,preset.power,30,2500),
+      front:parseNumeric(custom.front,preset.front,28,75),
+      rpm:parseNumeric(custom.rpm,preset.rpm,3000,20000),
+      radius:parseNumeric(custom.radius,preset.radius,0.24,0.55),
+      tire: COMPOUNDS[input.tire] === undefined ? 'sport' : input.tire,
+      adjustables: input.adjustables || {suspension:false,bars:false,gearbox:false,aero:false,brakes:false,diff:false},
+      ranges: input.ranges || {},
+      isPreset: !input.mass && !input.power && !input.front && !input.rpm && !input.radius,
+      sourceKind: input.car?'car-list + estimated specifications':'manual vehicle + estimated specifications'
+    };
+  }
+  function scaledValue(ranges,axle,section,p){
+    const l=ranges?.[section+axle+'Min'];
+    const h=ranges?.[section+axle+'Max'];
+    const min=Number(l),max=Number(h);
+    if(l!=='' && h!=='' && l!==undefined && h!==undefined && Number.isFinite(min) && Number.isFinite(max) && max>min) {
+      return {value:round(min+(max-min)*(p/100),1), unit:section==='spring'?'kgf/mm':'cm', precise:false, note:'Interpolación entre los límites que ingresaste (no telemetría).'};
+    }
+    return {value:pct(p),unit:'',precise:false,note:'Sin límites del juego; copiá la posición aproximada del deslizador.'};
+  }
+  function calculate(input){
+    const s=resolveSpecs(input);
+    const m=MODES[input.mode] || MODES.balance;
+    const bias=clamp(Number(input.bias)||0,-5,5);
+    // Son reglas plausibles y repetibles, no un modelo de la física propietaria FH6.
+    const frontWeight=s.front/100;
+    const extraPower=clamp((s.power/s.mass-0.32)*2,-0.3,0.55);
+    const pF=round(clamp(1.95+(frontWeight-.5)*.36+m.pressure+COMPOUNDS[s.tire]+extraPower*.06,1.55,2.65),2);
+    const pR=round(clamp(1.93-(frontWeight-.5)*.22+m.pressure+COMPOUNDS[s.tire]+extraPower*.05+(m.id==='drift'?.18:0),1.55,2.75),2);
+    const n=s.gears;
+    const gearRatios=[];
+    let ratioFirst= (m.id==='drift'?3.38 : m.id==='offroad'?3.36 : m.id==='accel'?2.98 : m.id==='speed'?2.85:3.12);
+    if(s.drive==='RWD' && m.id==='accel') ratioFirst-=0.24;
+    if(s.drive==='FWD' && m.id==='accel') ratioFirst-=0.32;
+    const ratioLast=n===1?1:(n>=8?0.68:n===7?0.76:n===6?0.82:n===5?0.92:1.05);
+    for(let i=0;i<n;i++){
+      const t=n===1?1:i/(n-1);
+      gearRatios.push(round(ratioFirst*Math.pow(ratioLast/ratioFirst,t),2));
+    }
+    // Top speed "teórico por RPM" usado SOLO para elegir final drive como punto inicial.
+    // No contempla arrastre, grip, pérdidas de transmisión o curva de potencia.
+    const targetSpeed=clamp(m.target * Math.pow(s.power/600,.10) * Math.pow(1400/s.mass,.06),130,440);
+    const topRatio=gearRatios[n-1];
+    const finalDrive=round(clamp(s.rpm*2*Math.PI*s.radius*60/(1000*targetSpeed*topRatio),2.2,6),2);
+    const rpmTop=round(s.rpm*2*Math.PI*s.radius*60/(1000*finalDrive*topRatio),0);
+    const isRally=m.id==='offroad';
+    const isDrift=m.id==='drift';
+    const camF=round(clamp((-1.20+m.camber)+(isRally?.2:0)+(isDrift?-.7:0),-3.5,0),1);
+    const camR=round(clamp((-0.90+m.camber)+(isRally?.15:0)+(isDrift?-.45:0),-3.5,0),1);
+    const toeF=isDrift?0.2:0;
+    const toeR=isDrift?-0.1:0;
+    const caster=isDrift?7: isRally?5.8:6.1;
+    // 1–65 representan unidades arbitrarias del juego.
+    const barFront=round(clamp(28+(s.front-50)*.43+m.bar-(bias*1.25)-(isDrift?2:0),1,65),1);
+    const barRear=round(clamp(29-(s.front-50)*.24+m.bar+(bias*1.35)+(isDrift?8:0),1,65),1);
+    const baseSpring=clamp(57+(s.mass-1350)*.013 + m.rate*65,12,87);
+    const springFP=round(clamp(baseSpring+(s.front-50)*1.05+bias*.7,8,96));
+    const springRP=round(clamp(baseSpring-(s.front-50)*.80-bias*.7+(s.drive==='RWD'?3:0),8,96));
+    const heightBase=isRally?78:isDrift?38: m.id==='speed'?14: m.id==='grip'?22: m.id==='accel'?26:30;
+    const heightFP=round(clamp(heightBase+(s.front-50)*.24,5,95));
+    const heightRP=round(clamp(heightBase-(s.front-50)*.18+(m.id==='accel'?4:0),5,95));
+    const reboundF=round(clamp(7.8 + (springFP-55)*.045 + (isRally?-1.0:0),3,15),1);
+    const reboundR=round(clamp(8.2 + (springRP-55)*.045 + (isRally?-1.0:0),3,15),1);
+    const bumpF=round(clamp(reboundF*(isRally?.55:.59),1,15),1);
+    const bumpR=round(clamp(reboundR*(isRally?.55:.59),1,15),1);
+    const frontAeroPct=round(clamp(15 + m.downforce*68 - bias*1.2,0,100));
+    const rearAeroPct=round(clamp(25 + m.downforce*62 + bias*1.5,0,100));
+    const brakeBalance=round(clamp(50+(s.front-50)*.2-bias*.35+(isDrift?-3:0),43,59));
+    const brakePressure=isRally?90:100;
+    const diffA=s.drive==='AWD' ? {fAccel:round(clamp(20+m.lock*.35,5,100)),fDecel:isRally?16:5,
+     rAccel:round(clamp((isDrift?80:58)+m.lock,5,100)),rDecel:isDrift?26:12,
+     center:round(clamp((isDrift?87:isRally?58:70)+bias*.75,50,100))} : {
+      accel:round(clamp((isDrift?86:s.drive==='FWD'?37:55)+m.lock,5,100)),
+      decel:isDrift?20:isRally?15: s.drive==='FWD'?7:12
+     };
+    const transmission = {final:finalDrive,ratios:gearRatios,topSpeedRpm:rpmTop,goalTarget:round(targetSpeed,0)};
+    const ranges=s.ranges;
+    return {
+      specs:s,mode:m,bias,
+      tires:{front:pF,rear:pR},transmission,
+      align:{camF,camR,toeF,toeR,caster},
+      bars:{front:barFront,rear:barRear},
+      springs:{front:scaledValue(ranges,'F','spring',springFP),rear:scaledValue(ranges,'R','spring',springRP),
+        heightF:scaledValue(ranges,'F','height',heightFP),heightR:scaledValue(ranges,'R','height',heightRP),
+        springFP,springRP,heightFP,heightRP},
+      damping:{reboundF,reboundR,bumpF,bumpR},
+      aero:{front:pct(frontAeroPct),rear:pct(rearAeroPct),frontPct:frontAeroPct,rearPct:rearAeroPct},
+      brakes:{balance:brakeBalance,pressure:brakePressure},diff:diffA,
+      guidance: m.id==='drift' && s.drive==='FWD' ? 'Drift con tracción delantera es más limitado; el algoritmo no puede cambiar la tracción.' : '',
+      timestamp: new Date().toISOString()
+    };
+  }
+  // Exploración de transmisiones mediante un modelo LONGITUDINAL simplificado.
+  // El ranking predice tendencias entre variantes; NO reproduce la física de FH6.
+  // No hay acceso a curva real de par, coeficiente aerodinámico ni límite de neumáticos.
+  function estimatePerformance(s, transmission, mode) {
+    const ratios=transmission.ratios, n=ratios.length;
+    const mass=s.mass, powerW=s.power*735.499, redline=s.rpm, r=s.radius;
+    const grip={street:.89,sport:1.03,race:1.23,rally:1.03,offroad:.98,drift:.79}[s.tire] || 1;
+    const tractionScale=s.drive==='AWD'?1:(s.drive==='FWD'?.72:.81);
+    const traction=mass*9.81*grip*tractionScale*(mode==='offroad'?.77:1);
+    const efficiency=s.drive==='AWD'?.81:.88;
+    const dragArea=({track:.88,hyper:.77,super:.79,sport:.83,muscle:.95,rally:.91,hatch:.75,offroad:1.19,electric:.73}[s.profile] || .84);
+    const rolling=mass*9.81*(mode==='offroad'?.030:.015);
+    const dt=.12;
+    let v=.12, gear=0,shiftWait=0,t=0, prev=v, maxV=v;
+    const goals=[60,100,140,200], crossings={};
+    for(let i=0;i<1100;i++) { // máximo 132 segundos de simulación aproximada
+      prev=v;
+      const total=transmission.final*ratios[gear];
+      const engineRpm=v/(2*Math.PI*r)*60*total;
+      if(engineRpm>=redline*.965 && gear<n-1 && shiftWait<=0){gear++;shiftWait=.16;}
+      const current=transmission.final*ratios[gear];
+      const rpm=v/(2*Math.PI*r)*60*current;
+      const effectiveRpm=Math.max(redline*.27,Math.min(redline,rpm));
+      const q=effectiveRpm/redline;
+      const fraction=q<.58 ? .29+1.13*q : q<.83 ? .945+.22*(q-.58) : 1-.50*(q-.83);
+      const torque=powerW*Math.max(.1,Math.min(1,fraction))/(2*Math.PI*effectiveRpm/60);
+      const wheelForce=(rpm>redline*.995 && gear===n-1)?0: Math.min(traction,torque*current*efficiency/r);
+      const drag=.5*1.225*dragArea*v*v;
+      const drive=shiftWait>0 ? 0:wheelForce;
+      const acc=Math.max(-3.0,(drive-drag-rolling)/mass);
+      v=Math.max(0,v+acc*dt);
+      if(shiftWait>0)shiftWait-=dt;
+      t+=dt;
+      maxV=Math.max(maxV,v);
+      for(const g of goals){
+        const threshold=g/3.6;
+        if(crossings[g]===undefined && prev<threshold && v>=threshold){
+          crossings[g]=t-dt+dt*(threshold-prev)/Math.max(.00001,v-prev);
+        }
+      }
+      if(t>35 && Math.abs(v-prev)<.0008)break;
+    }
+    // Si no llega a la velocidad solicitada, agregar una penalidad por diferencia.
+    const elapsed=(kmh)=>crossings[kmh] ?? (t+Math.max(1,(kmh-maxV*3.6))*.4);
+    return {t60:elapsed(60),t100:elapsed(100),t140:elapsed(140),t200:elapsed(200),
+      maxSpeed:maxV*3.6, reached100:crossings[100]!==undefined, reached200:crossings[200]!==undefined};
+  }
+  function candidateScore(m,perf,trans,base) {
+    // Objetivos de la función: no son tiempos de pista ni una nota absoluta del vehículo.
+    const a=perf.t100, b=perf.t200, middle=Math.max(.1,perf.t140-perf.t60), v=perf.maxSpeed;
+    let score;
+    switch(m.id){
+      case 'accel': score=-(a*.85+b*.32);break;
+      case 'speed': score=v*.09-a*.10;break;
+      case 'technical':score=-(a*.40+middle*1.1)+v*.006;break;
+      case 'grip':score=-(a*.20+middle*.75)+v*.013;break;
+      case 'offroad':score=-(a*.70+middle*.40)+v*.006;break;
+      case 'drift':score=-(middle*.8+a*.10)+v*.007;break;
+      default:score=-(a*.52+b*.17)+v*.027;
+    }
+    // Se prefiere una puesta a punto conservadora si dos candidatos puntúan parecido.
+    const penalty=Math.abs(Math.log(trans.final/base.final))*.30 +
+      Math.abs(Math.log(trans.ratios[0]/base.ratios[0]))*.22+
+      Math.abs(Math.log(trans.ratios[trans.ratios.length-1]/base.ratios[base.ratios.length-1]))*.14;
+    return score-penalty;
+  }
+  function compare(input) {
+    const baseline=calculate(input),s=baseline.specs,m=baseline.mode;
+    const base=baseline.transmission;
+    // Una sola marcha (p. ej. EV) no admite la misma exploración que una caja convencional.
+    if(s.gears<2) return {
+      recommended:baseline,variants:[{id:'best',label:'Configuración inicial',tune:baseline,score:0}],
+      tested:1,reason:'Esta transmisión tiene una sola marcha: no buscamos relaciones adicionales.'
+    };
+    const evaluated=[],seen=new Set();
+    const scoreCandidate=(final,ratios)=>{
+      const key=[final,...ratios].map(x=>x.toFixed(2)).join('-');
+      if(seen.has(key))return;
+      seen.add(key);
+      const tr={...base,final:round(final,2),ratios:ratios.map(x=>round(x,2))};
+      const out=estimatePerformance(s,tr,m.id);
+      evaluated.push({tr,score:candidateScore(m,out,tr,base),proxy:out});
+    };
+    scoreCandidate(base.final,base.ratios);
+    const first=base.ratios[0],last=base.ratios[base.ratios.length-1];
+    for(const fscale of [.82,.90,.96,1,1.04,1.10,1.18]) {
+      for(const firstScale of [.86,.94,1,1.07,1.15]) {
+        for(const lastScale of [.93,1,1.07]) {
+          for(const curve of [.88,1,1.12]) {
+            const fd=round(clamp(base.final*fscale,2.2,6),2);
+            const firstRatio=round(clamp(first*firstScale,1.6,4.8),2);
+            const lastRatio=round(clamp(last*lastScale,.55,1.45),2);
+            const ratios=[];const n=s.gears;
+            for(let i=0;i<n;i++) {
+              const t=i/(n-1);
+              ratios.push(round(firstRatio*Math.pow(lastRatio/firstRatio,Math.pow(t,curve)),2));
+            }
+            if(ratios.some((r,i)=>i>0&&(r>=ratios[i-1] || r/ratios[i-1]<.54)))continue;
+            scoreCandidate(fd,ratios);
+          }
+        }
+      }
+    }
+    evaluated.sort((a,b)=>b.score-a.score);
+    const selected=[];
+    for(const candidate of evaluated) {
+      const similar=selected.some(x=>Math.abs(x.tr.final-candidate.tr.final)<.12 &&
+        Math.abs(x.tr.ratios[0]-candidate.tr.ratios[0])<.13 &&
+        Math.abs(x.tr.ratios[x.tr.ratios.length-1]-candidate.tr.ratios[candidate.tr.ratios.length-1])<.08);
+      if(!similar)selected.push(candidate);
+      if(selected.length===3)break;
+    }
+    const labels=['Recomendada','Alternativa 2','Alternativa 3'];
+    const variants=selected.map((v,i)=>{
+      const tune={...baseline,transmission:{...v.tr,
+        // El límite geométrico no equivale a la velocidad máxima real.
+        topSpeedRpm:round(s.rpm*2*Math.PI*s.radius*60/(1000*v.tr.final*v.tr.ratios.at(-1)),0)}};
+      return {id:'option-'+i,label:labels[i],score:v.score,tune};
+    });
+    return {recommended:variants[0].tune,variants,tested:evaluated.length,
+      reason:'Ranking matemático aproximado de transmisiones; sin curva de par ni pruebas reales en el juego.'};
+  }
+  return {MODES,PROFILES,clamp,resolveSpecs,calculate,compare,estimatePerformance};
+});
+
+</script>
+<script>
+/* EasyTune v1.7: RECOMENDACIONES orientativas de mejoras, no catálogo de piezas reales. */
+(function(root){
+  'use strict';
+  const PRIORITY={
+    balance:   {tires:11,width:7,susp:10,bars:7,diff:10,gear:8,weight:9,brakes:6,aero:4,exhaust:5,intake:3,boost:1,clutch:2,conversion:0},
+    accel:     {tires:12,width:10,susp:5,bars:3,diff:11,gear:11,weight:11,brakes:2,aero:0,exhaust:8,intake:7,boost:7,clutch:5,conversion:6},
+    speed:     {tires:5,width:2,susp:4,bars:3,diff:4,gear:11,weight:5,brakes:1,aero:0,exhaust:11,intake:9,boost:12,clutch:6,conversion:0},
+    grip:      {tires:13,width:12,susp:12,bars:11,diff:9,gear:5,weight:11,brakes:9,aero:12,exhaust:2,intake:1,boost:0,clutch:2,conversion:0},
+    technical: {tires:12,width:10,susp:12,bars:10,diff:11,gear:8,weight:11,brakes:12,aero:8,exhaust:3,intake:2,boost:0,clutch:3,conversion:0},
+    drift:     {tires:11,width:6,susp:12,bars:8,diff:13,gear:11,weight:5,brakes:5,aero:0,exhaust:6,intake:7,boost:7,clutch:4,conversion:7},
+    offroad:   {tires:13,width:8,susp:13,bars:6,diff:12,gear:8,weight:8,brakes:5,aero:0,exhaust:5,intake:3,boost:4,clutch:2,conversion:10}
+  };
+  const limits={basic:4,balanced:8,max:12};
+  const shop = {
+    tires:'Neumáticos y llantas',width:'Neumáticos y llantas',susp:'Plataforma y manejo',bars:'Plataforma y manejo',
+    diff:'Transmisión',gear:'Transmisión',weight:'Plataforma y manejo',brakes:'Plataforma y manejo',
+    aero:'Aerodinámica y aspecto',exhaust:'Motor',intake:'Motor',boost:'Conversiones / motor',clutch:'Transmisión',conversion:'Conversiones'
+  };
+  const RANK={tires:1,width:2,susp:3,diff:4,gear:5,bars:6,weight:7,brakes:8,aero:9,exhaust:10,intake:11,clutch:12,boost:13,conversion:14};
+  function recommend({specs,mode='balance',level='balanced',keepClass=true}){
+    const m=PRIORITY[mode]?mode:'balance';
+    const lvl=limits[level]?level:'balanced';
+    const isDirt=m==='offroad',isDrift=m==='drift';
+    const isPower=m==='accel'||m==='speed';
+    const isAero=m==='grip'||m==='technical';
+    const entries=[];
+    const add=(id,title,why,opts={})=>{
+      const p=PRIORITY[m][id]||0;
+      if(p<=0)return;
+      if(opts.skip)return;
+      // Heurística de puntos de utilidad, NO predicción del PI ni del tiempo de vuelta.
+      let score=p*10;
+      if(keepClass && opts.expensivePI)score-=40;
+      if(lvl==='basic' && opts.expensivePI)score-=35;
+      if(specs.power>700 && (id==='boost'||id==='intake'||id==='exhaust'))score-=30;
+      if(specs.gears<2 && id==='gear')return;
+      if(score<5)return;
+      entries.push({id,title,why,category:shop[id],priority:score,optional:!!opts.optional,provides:opts.provides||null, tire:opts.tire||null});
+    };
+    const sportTire=specs.tire==='sport'||specs.tire==='street';
+    let tireTitle=isDirt?'Neumáticos de rally o todoterreno':isDrift?'Neumáticos para drift (si aparecen en tu auto)':
+      lvl==='basic'?'Neumáticos deportivos':(m==='accel'?'Neumáticos de carreras con buena tracción':'Neumáticos de competición / semislick');
+    const targetTire=isDirt?'rally':isDrift?'drift':lvl==='basic'?'sport':'race';
+    add('tires',tireTitle,isDirt?'Son mucho más adecuados para tierra y baches.':isDrift?'Ayudan a controlar el derrape; comprobá cuál permite tu vehículo.':'El agarre permite aprovechar mejor la potencia y frenar antes.',{skip:specs.tire===targetTire || (specs.tire==='race' && !isDrift && !isDirt),tire:targetTire,expensivePI:!sportTire});
+    add('width',specs.drive==='FWD'?'Más ancho de neumáticos delanteros':specs.drive==='AWD'?'Más ancho de neumáticos en ambos ejes':'Más ancho de neumáticos traseros',
+      'Más superficie de apoyo puede mejorar tracción y agarre, si tu modelo ofrece esta mejora.',{expensivePI:keepClass});
+    add('susp',isDirt?'Suspensión de rally':isDrift?'Suspensión de drift':'Suspensión de carreras regulable',
+      isDirt?'Absorbe baches y permite regular altura.':isDrift?'Permite configurar ángulo y respuesta para derrapar.':'Habilita ajustes finos de muelles, amortiguación y altura.',{skip:!!specs.adjustables?.suspension,provides:'suspension'});
+    add('diff','Diferencial de carreras','Permite controlar cómo se reparte la fuerza al acelerar y soltar el acelerador.',{skip:!!specs.adjustables?.diff,provides:'diff'});
+    add('gear','Transmisión de carreras ajustable', 'Necesaria para cambiar las relaciones de cada marcha y usar el comparador de PistaTune.',{skip:specs.gears<2 || !!specs.adjustables?.gearbox,provides:'gearbox'});
+    add('bars','Barras estabilizadoras de carreras','Te dejan regular cuánto gira el auto y su equilibrio al entrar en curva.',{skip:!!specs.adjustables?.bars,provides:'bars'});
+    add('weight',lvl==='basic'?'Reducción de peso ligera':'Reducción de peso', 'Menos peso suele ayudar a acelerar, frenar y cambiar de dirección.',{expensivePI:keepClass});
+    add('brakes','Frenos de carreras regulables', 'Te permiten ajustar el equilibrio y la presión del frenado.',{skip:!!specs.adjustables?.brakes,provides:'brakes'});
+    add('aero','Alerón y divisor delantero regulables', 'Dan más carga aerodinámica para curvas rápidas; comprobá si están disponibles.',{skip:!!specs.adjustables?.aero || !isAero,provides:'aero',expensivePI:keepClass});
+    add('exhaust',lvl==='basic'?'Escape deportivo':'Escape de competición', 'Suele ser una mejora de motor sencilla antes de buscar conversiones grandes.',{expensivePI:true});
+    add('intake','Admisión / encendido mejorados', 'Suben la potencia, pero comprobalos con el contador PI de la tienda.',{expensivePI:true});
+    add('boost','Sobrealimentación disponible (turbo o compresor)', 'Solo si aparece para tu auto y el motor puede aprovecharla sin perder demasiada tracción.',{expensivePI:true,optional:true,skip:!isPower && !isDrift && !isDirt});
+    add('clutch','Embrague mejorado', 'Puede acelerar el cambio de marcha cuando el auto ya tiene una buena transmisión.',{optional:true});
+    if((m==='accel' || m==='offroad') && specs.drive!=='AWD'){
+      add('conversion','Conversión a tracción 4x4 (opcional)', 'Puede mejorar la salida en superficies de poco agarre, pero agrega peso y cambia el comportamiento. Verificá disponibilidad.',{expensivePI:true,optional:true});
+    } else if(isDrift && specs.drive==='AWD'){
+      add('conversion','Conversión a tracción trasera (opcional)', 'Puede facilitar el drift, pero depende de las conversiones disponibles para tu modelo.',{expensivePI:true,optional:true});
+    }
+    entries.sort((a,b)=>b.priority-a.priority || (RANK[a.id]||99)-(RANK[b.id]||99));
+    const picked=entries.slice(0,limits[lvl]).sort((a,b)=>(RANK[a.id]||99)-(RANK[b.id]||99));
+    const avoid = isDrift ? ['No compres neumáticos de máximo agarre de circuito solo por ser los más caros: podrían dificultar iniciar el derrape.']:
+      isDirt ? ['No compres suspensión de pista muy baja para caminos con saltos y baches.']:
+      m==='speed' ? ['No compres aerodinámica de máxima carga solo porque se vea deportiva: puede restar velocidad punta.']:
+      ['No cambies el motor solo por tener más CV: puede subir el PI y empeorar el balance del auto.'];
+    avoid.push('No compres automáticamente el nivel más caro de cada pieza. Mirá cuánto PI consume en tu auto.');
+    if(keepClass)avoid.push('Si una compra supera el límite de tu clase actual, saltala y probá otra de la lista.');
+    return {mode:m,level:lvl,keepClass,parts:picked,avoid,tireTarget:picked.find(p=>p.id==='tires')?.tire||null,
+      unlocks:Object.fromEntries(picked.filter(p=>p.provides).map(p=>[p.provides,true])),
+      note:keepClass?'Priorizamos piezas útiles, pero solo el juego puede confirmar que mantenés la clase.':'Priorizamos el rendimiento. Revisá los puntos PI y la disponibilidad de cada pieza en el juego.'};
+  }
+  root.EasyTuneParts={recommend,PRIORITY,limits};
+})(window);
+</script>
+<script>
+/* EasyTune — interfaz en español, sin frameworks ni servicios externos. */
+(() => {
+  'use strict';
+  const $ = id => document.getElementById(id);
+  const CARS = window.EASYTUNE_CARS || [];
+  const ENGINE = window.EasyTuneEngine;
+  const CATALOG = window.EasyTuneCatalog;
+  const PARTS = window.EasyTuneParts;
+  if(!ENGINE) { document.body.insertAdjacentHTML('afterbegin', '<div class="no-js">No se pudo cargar el motor local.</div>'); return; }
+  const MODE_ORDER = ['balance','accel','speed','grip','technical','drift','offroad'];
+  const FEATURED_CAR = CARS.find(c => c.make === 'Lamborghini' && c.model === 'Sesto Elemento') || CARS[0];
+  const ADVANCED_FIELDS=['power','mass','front','rpm','radius','tire','hasSusp','hasAero','hasBrakes','hasDiff','hasBars','hasGear',
+    'springFMin','springFMax','springRMin','springRMax','heightFMin','heightFMax','heightRMin','heightRMax'];
+  let selectedCar=FEATURED_CAR||null, manual=false, activeStep=1, selectedMode='balance', tune=null, comparison=null, chosenVariant='option-0', allOpen=false, toastTimeout=null;
+  let upgradesEnabled=true, buildLevel='balanced', upgradePlan=null, projectedTune=false;
+  let purchased=readPurchased();
+  let saved=readSaved();
+  let tests=readTests();
+  const format=(x,d=0) => typeof x==='number' ? x.toLocaleString('es-AR',{minimumFractionDigits:d,maximumFractionDigits:d}) : String(x);
+  const number=(x,d=0)=>format(x,d);
+  const safe=x=>String(x).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+  const escapeAttr=safe;
+  const normalize=s=>String(s).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+  // Nota: se conservan las claves eas[y]tune.* para NO perder configuraciones de versiones anteriores.
+  function readTests(){try{const x=JSON.parse(localStorage.getItem('easytune.tests.v1')||'[]');return Array.isArray(x)?x.slice(-150):[]}catch{return []}}
+  function writeTests(){try{localStorage.setItem('easytune.tests.v1',JSON.stringify(tests.slice(-150)))}catch{toast('No pudimos guardar esta prueba en el navegador.')}}
+  function testKey(){const i=readInput();return JSON.stringify([i.name,i.mode,i.drive,i.gears,i.power,i.mass,i.front,i.rpm,i.radius,i.tire,i.profile,i.bias,i.adjustables,i.ranges,upgradesEnabled,buildLevel,$('keepClass').checked]);}
+  function testMetric(){return selectedMode==='speed'?{label:'Velocidad máxima alcanzada (km/h)',unit:'km/h',better:'max'} : selectedMode==='accel'?{label:'Tiempo de 0 a 100 km/h (segundos)',unit:'s',better:'min'} : selectedMode==='drift'?{label:'Puntuación de drift (puntos)',unit:'pts',better:'max'}:{label:'Tiempo de vuelta (segundos)',unit:'s',better:'min'};}
+  function renderCarFacts(){
+    const target=$('carFactsContent');if(!target)return;
+    const d=ENGINE.resolveSpecs(readInput());
+    const fields=[['Peso',format(d.mass)+' kg','mass'],['Potencia',format(d.power)+' CV','power'],['Distribución delantera',format(d.front)+'%','front'],['Corte del motor',format(d.rpm)+' rpm','rpm']];
+    const rows=fields.map(([name,val,id])=>'<div><span>'+safe(name)+'</span><strong>'+safe(val)+'</strong><small>'+($(id).value.trim()?'Dato que escribiste':'Estimado')+'</small></div>').join('');
+    target.innerHTML='<p>El catálogo identifica el modelo, la tracción y las marchas, pero <strong>no tiene las especificaciones exactas</strong> de cada preparación. La calculadora usa estos datos:</p><div class="car-facts-table">'+rows+'</div><p>Podés mejorar el resultado abriendo <strong>«¿Le cambiaste el motor…?»</strong> y completando los datos que muestra Forza.</p>';
+  }
+  function readPurchased(){try{const data=JSON.parse(localStorage.getItem('easytune.parts.v1')||'{}');return data && typeof data==='object' && !Array.isArray(data)?data:{}}catch{return {}}}
+  function writePurchased(){try{localStorage.setItem('easytune.parts.v1',JSON.stringify(purchased));}catch{toast('No se pudieron guardar las piezas en este navegador.')}}
+  function purchaseKey(){const x=readInput();return JSON.stringify([x.name,selectedMode,buildLevel,$('keepClass').checked]);}
+  function purchasedIds(){return Array.isArray(purchased[purchaseKey()])?purchased[purchaseKey()]:[];}
+  function renderBuildSettings(){
+    document.querySelectorAll('[data-build-enabled]').forEach(btn=>{const selected=(btn.dataset.buildEnabled==='yes')===upgradesEnabled;btn.classList.toggle('active',selected);btn.setAttribute('aria-pressed',String(selected));});
+    $('buildDetails').hidden=!upgradesEnabled;
+    document.querySelectorAll('[data-build-level]').forEach(btn=>{const selected=btn.dataset.buildLevel===buildLevel;btn.classList.toggle('active',selected);btn.setAttribute('aria-pressed',String(selected));});
+  }
+  function renderUpgradeResults(){
+    const box=$('upgradeResults');box.hidden=!upgradesEnabled || !upgradePlan;
+    if(box.hidden)return;
+    const parts=upgradePlan.parts;
+    const current=new Set(purchasedIds());
+    $('upgradeProgress').textContent=`${parts.filter(p=>current.has(p.id)).length} / ${parts.length} compradas`;
+    $('upgradeIntro').textContent=(buildLevel==='basic'?'Una preparación con pocas compras. ':buildLevel==='max'?'Una preparación con más piezas. ':'Una preparación equilibrada para competir. ')+upgradePlan.note;
+    $('upgradePartList').innerHTML=parts.map((part,i)=>{
+      const checked=current.has(part.id);
+      return `<label class="upgrade-part ${checked?'is-purchased':''}"><input type="checkbox" data-purchased="${safe(part.id)}" ${checked?'checked':''} aria-label="Ya compré: ${safe(part.title)}"><span class="upgrade-part-body"><span class="upgrade-part-top"><span class="upgrade-part-title">${safe(part.title)}</span><span class="upgrade-rank">${checked?'✓ Comprada':'Por comprar'}</span></span><span class="upgrade-part-category">${safe(part.category)}</span><span class="upgrade-part-reason">${safe(part.why)}</span></span></label>`;
+    }).join('') || '<p class="small-note">Con los datos actuales no encontramos mejoras pendientes en este nivel. Probá una preparación más completa.</p>';
+    $('upgradeAvoid').innerHTML=upgradePlan.avoid.map(t=>`<p>• ${safe(t)}</p>`).join('');
+  }
+  function readSaved() {try{const x=JSON.parse(localStorage.getItem('easytune.saves.v1')||'[]');return Array.isArray(x)?x.slice(0,50):[]}catch{return []}}
+  function writeSaved(){try{localStorage.setItem('easytune.saves.v1',JSON.stringify(saved));}catch{toast('El navegador no pudo guardar los datos.')} updateSavedCount();}
+  function updateSavedCount(){$('savedCount').hidden=saved.length===0; $('savedCount').textContent=saved.length;}
+  function toast(message){const el=$('toast');el.textContent=message;el.classList.add('show');clearTimeout(toastTimeout);toastTimeout=setTimeout(()=>el.classList.remove('show'),2900);}
+  function applyCar(car){
+    selectedCar=car;manual=false;
+    $('carSearch').value=car.label;
+    $('clearSearch').hidden=false;
+    $('searchFeedback').hidden=true;
+    $('selectedCar').hidden=false;
+    $('manualCarPanel').hidden=true;
+    $('manualSwitch').textContent='+ Agregar un auto que no aparece';
+    $('drive').value=car.drive;
+    $('gears').value=String(car.gears);
+    // Borramos los datos específicos anteriores para evitar confundir dos autos.
+    ['power','mass','front','rpm','radius','springFMin','springFMax','springRMin','springRMax','heightFMin','heightFMax','heightRMin','heightRMax'].forEach(id=>$(id).value='');
+    $('tire').value='sport';
+    ['hasSusp','hasBars','hasGear','hasBrakes','hasDiff','hasAero'].forEach(id=>$(id).checked=false);
+    $('selectedCarTitle').textContent=car.make+' '+car.model;
+    $('selectedCarMeta').textContent=car.year+' · '+car.category+' · '+car.pi;
+    $('carAssumptions').hidden=!car.isEstimatedDrivetrain;
+    const mark=$('selectedCar').querySelector('.verified-label');
+    if(mark){mark.textContent=car.catalogSource==='comunitario'?'Lista comunitaria':'✓ Catálogo';mark.title=car.catalogSource==='comunitario'?'Datos de una lista comunitaria; verificá en el juego':'Modelo y clase del catálogo; datos mecánicos estimados';}
+    closeSearch();refreshSide();renderCarFacts();
+  }
+  function switchManual(name){
+    selectedCar=null;manual=true;
+    $('selectedCar').hidden=true;
+    $('carSearch').value=(name || '').trim();
+    $('clearSearch').hidden=!$('carSearch').value;
+    $('searchFeedback').hidden=true;
+    $('manualCarPanel').hidden=false;
+    $('carAssumptions').hidden=true;
+    $('manualSwitch').textContent='← Volver a elegir un auto del catálogo';
+    $('customName').value=(name || '').trim();
+    $('drive').value='RWD';$('gears').value='6';
+    ['hasSusp','hasBars','hasGear','hasBrakes','hasDiff','hasAero'].forEach(id=>$(id).checked=false);
+    ['power','mass','front','rpm','radius','springFMin','springFMax','springRMin','springRMax','heightFMin','heightFMax','heightRMin','heightRMax'].forEach(id=>$(id).value='');
+    closeSearch();refreshSide();renderCarFacts();
+  }
+  function toggleManual(){if(manual){applyCar(FEATURED_CAR);$('carSearch').focus();}else{switchManual($('carSearch').value===selectedCar?.label?'':$('carSearch').value);$('customName').focus();}}
+  function closeSearch(){$('carOptions').hidden=true;$('carSearch').setAttribute('aria-expanded','false');}
+  function showMatches(value){
+    const list=$('carOptions');
+    const typed=value.trim();const term=normalize(typed);
+    const pending=!!typed && (!selectedCar || value!==selectedCar.label);
+    $('selectedCar').hidden=pending || !typed || manual;
+    const feedback=$('searchFeedback');
+    feedback.hidden=!pending;
+    if(!pending){closeSearch();refreshSide();return;}
+    const matches=CARS.filter(c => {
+      const tokens=[`${c.make} ${c.model}`,`${c.make} ${c.model} ${c.year}`,`${c.year} ${c.make} ${c.model}`,c.label];
+      return tokens.some(t=>normalize(t).includes(term));
+    }).sort((a,b)=> {
+      const rank=c=> {
+        const model=normalize(c.model),brand=normalize(c.make),full=brand+' '+model;
+        if(model===term||full===term)return 0;
+        if(model.startsWith(term))return 1;
+        if(full.startsWith(term))return 2;
+        if(brand===term)return 3;
+        return 4;
+      };
+      return rank(a)-rank(b)||a.model.localeCompare(b.model,'es')||a.year-b.year;
+    }).slice(0,10);
+    const resultRows=matches.map(c=>`<button type="button" class="option-row" data-car-id="${c.id}" role="option"><span>${safe(c.make+' '+c.model)} <small>· ${c.year}</small></span><small>${safe(c.pi)}</small></button>`).join('');
+    const customRow=`<button type="button" class="option-row option-row--custom" id="useCustomFromSearch"><span>＋ Usar <strong>«${safe(typed)}»</strong> como auto personalizado</span><span aria-hidden="true">→</span></button>`;
+    list.innerHTML=resultRows+customRow;
+    feedback.textContent=matches.length?'Elegí un modelo de la lista. Si no es ninguno, podés usar el nombre escrito.':'No aparece entre los autos precargados. Podés continuar igual con este nombre.';
+    list.hidden=false;$('carSearch').setAttribute('aria-expanded','true');refreshSide();
+  }
+  function renderModes(){
+    $('modeGrid').innerHTML=MODE_ORDER.map(id=>{
+      const m=ENGINE.MODES[id];const chosen=id===selectedMode;
+      return `<button type="button" role="radio" aria-checked="${chosen}" class="mode-card ${chosen?'selected':''}" data-mode="${id}"><span class="mode-emoji" aria-hidden="true">${m.emoji}</span><span class="mode-card-content"><strong>${m.label}</strong><small>${m.description}</small></span><span class="mode-select" aria-hidden="true">${chosen?'●':'○'}</span></button>`;
+    }).join('');
+    refreshSide();
+  }
+  function refreshSide(){
+    const typed=$('carSearch').value.trim();
+    const pending=!manual && (!selectedCar || typed!==selectedCar.label);
+    const name=manual?($('customName').value.trim()||'Auto personalizado') : pending?(typed||'Elegí tu auto') : (selectedCar.make+' '+selectedCar.model);
+    $('sideCarName').textContent=name;
+    $('sideCarMeta').textContent=manual?'Datos personalizados (estimados)':pending?'Seleccioná un resultado o continuá con tu nombre':selectedCar.year+' · '+selectedCar.pi;
+    const m=ENGINE.MODES[selectedMode];$('sideModeIcon').textContent=m.emoji;$('sideModeName').textContent=m.label;
+    $('sideModeDesc').textContent=m.description;
+  }
+  function goStep(n){
+    if(n===2 && !validateCar())return;
+    if(n===3){if(!validateCar())return;computeAndRender();}
+    activeStep=n;
+    [1,2,3].forEach(i=>{
+      $('step'+i).hidden=i!==n;
+      const nav=$('nav'+i);nav.classList.toggle('active',i===n);nav.classList.toggle('complete',i<n);
+      nav.setAttribute('aria-current',i===n?'step':'false');
+    });
+    window.scrollTo({top:Math.max(0,document.querySelector('.steps').getBoundingClientRect().top+scrollY-20),behavior:'smooth'});
+  }
+  function validateCar(){
+    if(!manual && selectedCar && $('carSearch').value===selectedCar.label)return true;
+    const term=$('carSearch').value.trim();
+    if(!manual && term.length>=2){switchManual(term);return true;}
+    if(manual && $('customName').value.trim().length>=2)return true;
+    toast('Escribí o elegí un auto para continuar.');return false;
+  }
+  function readInput(){
+    const field=id=>$(id).value.trim();
+    const ranges={};
+    ['springFMin','springFMax','springRMin','springRMax','heightFMin','heightFMax','heightRMin','heightRMax'].forEach(x=>ranges[x]=field(x));
+    return {
+      car:manual?null:selectedCar,
+      name:manual?field('customName') : selectedCar.label,
+      profile:manual?$('customProfile').value:selectedCar.profile,
+      drive:$('drive').value,gears:field('gears'),power:field('power'),mass:field('mass'),front:field('front'),rpm:field('rpm'),radius:field('radius'),
+      tire:$('tire').value,
+      adjustables:{suspension:$('hasSusp').checked,bars:$('hasBars').checked,gearbox:$('hasGear').checked,aero:$('hasAero').checked,brakes:$('hasBrakes').checked,diff:$('hasDiff').checked},
+      ranges,mode:selectedMode,bias:Number($('bias').value)
+    };
+  }
+  function showBias(){const v=Number($('bias').value);$('biasValue').textContent=v===0?'Equilibrado':v<0?`Más estable (${Math.abs(v)})`:`Más ágil (${v})`;}
+  function computeAndRender(){
+    try{
+      const input=readInput(); projectedTune=false;
+      upgradePlan = upgradesEnabled && PARTS ? PARTS.recommend({specs:ENGINE.resolveSpecs(input),mode:selectedMode,level:buildLevel,keepClass:$('keepClass').checked}) : null;
+      const planned={...input};
+      if(upgradePlan){
+        // Simulamos únicamente componentes confirmables: no inventamos cambios de CV, kg o PI.
+        planned.adjustables={...input.adjustables,...upgradePlan.unlocks};
+        if(upgradePlan.tireTarget)planned.tire=upgradePlan.tireTarget;
+        projectedTune=true;
+      }
+      if(planned.adjustables.gearbox){comparison=ENGINE.compare(planned);}
+      else{const baseline=ENGINE.calculate(planned);comparison={recommended:baseline,variants:[{id:'option-0',label:'Sin caja regulable',tune:baseline,score:0}],tested:1,reason:'Para optimizar las marchas individuales, primero instalá una transmisión regulable.'};}
+      chosenVariant='option-0';tune=comparison.recommended;renderResults();
+    }
+    catch(e){console.error(e);toast('No pudimos calcular los ajustes. Revisá los números.');}
+  }
+  const row=(label,value,unit='',relative=false,disabled=false)=>({label,value,unit,relative,disabled});
+  function buildSections(t){
+    const s=t.specs;const u=s.adjustables;const p=t.springs;
+    const lockedRow=txt=>[row('Este apartado',txt,'',true,true)];
+    const springsNote='Los valores en % son una posición aproximada del deslizador, porque los límites dependen de cada pieza. Podés ingresar mínimos y máximos en el paso 1 para obtener kgf/mm y cm.';
+    return [
+      {name:'Neumáticos',blurb:'Presión de las ruedas',rows:[row('Delanteros',number(t.tires.front,2),'bares'),row('Traseros',number(t.tires.rear,2),'bares')],hint:'Presión inicial estimada. Probá cambios pequeños y controlá la temperatura y el agarre.'},
+      {name:'Relaciones de marchas',blurb:'Aceleración y velocidad',rows:u.gearbox?[row('Transmisión final',number(t.transmission.final,2)),...t.transmission.ratios.map((v,i)=>row(`${i+1}ª marcha`,number(v,2)))]:lockedRow('Necesitás una transmisión de carreras ajustable'),hint:`Límite teórico por RPM en última marcha: ${format(t.transmission.topSpeedRpm)} km/h. No es la velocidad punta real; no contempla resistencia del aire, potencia ni pérdida de tracción. Si el motor toca el limitador antes de lo deseado, alargá la relación final (número más bajo). Para regular cada marcha necesitás una transmisión compatible.`},
+      {name:'Alineación',blurb:'Cómo apoyan las ruedas',rows:[row('Caída delantera',number(t.align.camF,1),'°'),row('Caída trasera',number(t.align.camR,1),'°'),row('Convergencia delantera',number(t.align.toeF,1),'°'),row('Convergencia trasera',number(t.align.toeR,1),'°'),row('Avance',number(t.align.caster,1),'°')],hint:'La caída negativa ayuda a apoyar en curvas, pero demasiada perjudica la frenada. Empezá con convergencia cercana a cero.'},
+      {name:'Barras estabilizadoras',blurb:'Cuánto se inclina al doblar',rows:u.bars?[row('Delantera',number(t.bars.front,1)),row('Trasera',number(t.bars.rear,1))]:lockedRow('Requiere piezas regulables'),hint:'Un cambio de barras modifica el equilibrio en curva. Si el auto no gira, probá un poco menos adelante o más atrás.'},
+      {name:'Muelles y altura',blurb:'Dureza y distancia al suelo',rows:u.suspension?[row('Muelle delantero',typeof p.front.value==='number'?number(p.front.value,1):p.front.value,p.front.unit,typeof p.front.value!=='number'),row('Muelle trasero',typeof p.rear.value==='number'?number(p.rear.value,1):p.rear.value,p.rear.unit,typeof p.rear.value!=='number'),row('Altura delantera',typeof p.heightF.value==='number'?number(p.heightF.value,1):p.heightF.value,p.heightF.unit,typeof p.heightF.value!=='number'),row('Altura trasera',typeof p.heightR.value==='number'?number(p.heightR.value,1):p.heightR.value,p.heightR.unit,typeof p.heightR.value!=='number')]:lockedRow('Requiere suspensión regulable'),hint:springsNote},
+      {name:'Amortiguación',blurb:'Control de rebotes',rows:u.suspension?[row('Rebote delantero',number(t.damping.reboundF,1)),row('Rebote trasero',number(t.damping.reboundR,1)),row('Compresión delantera',number(t.damping.bumpF,1)),row('Compresión trasera',number(t.damping.bumpR,1))]:lockedRow('Requiere suspensión regulable'),hint:'El rebote controla la extensión y la compresión controla cómo absorbe un bache. Son sugerencias aproximadas para empezar.'},
+      {name:'Aerodinámica',blurb:'Agarre a alta velocidad',rows:u.aero?[row('Carga delantera',t.aero.front,'',true),row('Carga trasera',t.aero.rear,'',true)]:lockedRow('No tenés aero regulable'),hint:u.aero?'Se indica % del deslizador porque la carga máxima cambia entre kits y autos. Mayor carga suele mejorar curvas rápidas, a costa de la velocidad punta.':'Si instalás alerón o divisor delantero regulable, marcá la opción en el paso 1.'},
+      {name:'Frenos',blurb:'Estabilidad al frenar',rows:u.brakes?[row('Equilibrio',number(t.brakes.balance),'% delante'),row('Presión',number(t.brakes.pressure),'%')]:lockedRow('Requiere frenos regulables'),hint:'El equilibrio indica la proporción de frenado delantero. Si bloqueás ruedas o perdés estabilidad, ajustá gradualmente.'},
+      {name:'Diferencial',blurb:'Cómo llega la potencia a las ruedas',rows:u.diff ? s.drive==='AWD' ?[
+        row('Delantero aceleración',number(t.diff.fAccel),'%'),row('Delantero desaceleración',number(t.diff.fDecel),'%'),
+        row('Trasero aceleración',number(t.diff.rAccel),'%'),row('Trasero desaceleración',number(t.diff.rDecel),'%'),row('Central: torque atrás',number(t.diff.center),'%')
+      ]:[row('Aceleración',number(t.diff.accel),'%'),row('Desaceleración',number(t.diff.decel),'%')]:lockedRow('Requiere diferencial regulable'),hint:'Más bloqueo en aceleración puede transmitir mejor la potencia, pero demasiado puede hacer que el auto se resista a girar.'}
+    ];
+  }
+  function renderResults(){
+    if(!tune)return;
+    const t=tune;
+    $('resultFor').textContent=t.specs.carName+' · '+t.mode.label;
+    const estimated=t.specs.isPreset;
+    $('sourceWarning').textContent=(estimated?'Datos de rendimiento: aproximados por tipo de vehículo (no tomados de la pantalla del juego).':'Se usan los datos que ingresaste; los campos vacíos siguen siendo estimaciones.')+(t.guidance?' '+t.guidance:'')+(projectedTune?' El tuneo supone las piezas recomendadas como instaladas, pero NO estima aumento de potencia, disminución de peso ni puntos PI; volvé a calcular con los datos reales después de comprar.':'');
+    renderUpgradeResults();
+    renderOptimizer();
+    $('resultFor').textContent=t.specs.carName+' · '+t.mode.label+(projectedTune?' · tuneo previsto después de comprar piezas':'');
+    const sections=buildSections(t);
+    window._easyTuneSections=sections;
+    $('resultsList').innerHTML=sections.map((sec,i)=>{
+      const open=allOpen||i<2;
+      return `<details class="tune-section" data-section="${i}" ${open?'open':''}><summary><span class="result-index">${String(i+1).padStart(2,'0')}</span><span class="result-title"><strong>${safe(sec.name)}</strong><small>${safe(sec.blurb)}</small></span><span class="result-chevron" aria-hidden="true">›</span></summary><div class="result-body"><div class="result-rows">${sec.rows.map(r=>`<div class="tune-row ${r.disabled?'disabled':''}"><span class="r-label">${safe(r.label)}</span><span class="r-value ${r.relative?'relative':''}">${safe(r.value)}${r.unit?`<span class="r-unit">${safe(r.unit)}</span>`:''}</span></div>`).join('')}</div><p class="result-note ${sec.name==='Muelles y altura'?'attention':''}">${safe(sec.hint)}</p><button type="button" class="result-copy" data-copy-section="${i}">▢ Copiar esta sección</button></div></details>`;
+    }).join('');
+    $('toggleAll').textContent=allOpen?'Cerrar todas':'Abrir todas';
+  }
+  function renderOptimizer(){
+    if(!comparison)return;
+    const q=comparison;
+    $('optimizerHeadline').textContent=q.tested>1?`Comparamos ${q.tested} alternativas de transmisión`:'Configuración de transmisión inicial';
+    $('optimizerExplanation').textContent=q.tested>1?'Elegimos la mejor según un modelo matemático simplificado para tu objetivo. No es una prueba dentro de Forza.':q.reason;
+    $('optimizerVariants').innerHTML=q.variants.map((v,i)=>{
+      const tr=v.tune.transmission;
+      return `<button class="optimizer-choice ${chosenVariant===v.id?'active':''}" type="button" data-variant="${safe(v.id)}" aria-pressed="${chosenVariant===v.id}"><span class="choice-heading">${i===0?'★ ':''}${safe(v.label)}</span><span class="choice-detail">Final <strong>${number(tr.final,2)}</strong> · 1ª <strong>${number(tr.ratios[0],2)}</strong></span><span class="choice-action">${chosenVariant===v.id?'✓ Usando esta':'Elegir esta →'}</span></button>`;
+    }).join('');
+    $('testValueLabel').textContent=testMetric().label;
+    $('testValue').placeholder=selectedMode==='speed'?'Ej. 325,5':selectedMode==='drift'?'Ej. 150000':'Ej. 3,45';
+    renderTestHistory();
+  }
+  function renderTestHistory(){
+    if(!comparison)return;
+    const metric=testMetric();
+    const ours=tests.filter(t=>t.key===testKey() && comparison.variants.some(v=>v.id===t.variantId));
+    const result=$('testHistory');
+    if(!ours.length){result.innerHTML='<p class="small-note">Todavía no hay pruebas registradas para este auto y modo.</p>';return;}
+    const best=ours.reduce((a,b)=>metric.better==='max'?(b.value>a.value?b:a):(b.value<a.value?b:a));
+    const bestVariant=comparison.variants.find(v=>v.id===best.variantId);
+    result.innerHTML='<div class="test-winner">🏆 Mejor resultado real: <strong>'+safe(bestVariant?.label||'Opción')+'</strong> · '+number(best.value,2)+' '+metric.unit+'</div>'+
+      '<div class="test-records">'+ours.map(t=>{const v=comparison.variants.find(c=>c.id===t.variantId);return '<div><span>'+safe(v?.label||'Opción')+'</span><strong>'+number(t.value,2)+' '+metric.unit+'</strong></div>'}).join('')+'</div>'+
+      (chosenVariant!==best.variantId?'<button type="button" id="useBestMeasured" data-variant="'+safe(best.variantId)+'" class="btn outline test-use-best">Usar el mejor medido →</button>':'');
+  }
+  function switchVariant(id){
+    const pick=comparison?.variants.find(v=>v.id===id);if(!pick)return;
+    chosenVariant=id;tune=pick.tune;renderResults();
+  }
+  function recordTest(){
+    if(!comparison)return;
+    const raw=$('testValue').value.replace(',','.');const value=Number(raw);
+    if(!Number.isFinite(value)||value<=0||value>(selectedMode==='drift'?10000000:2000)){toast('Ingresá un resultado válido de tu prueba.');return;}
+    const key=testKey();
+    tests=tests.filter(x=>!(x.key===key && x.variantId===chosenVariant));
+    tests.push({key,variantId:chosenVariant,value,created:Date.now()});
+    writeTests();$('testValue').value='';renderTestHistory();toast('¡Prueba guardada! Podés comparar otra opción.');
+  }
+  function sectionText(sec){return `${sec.name}\n`+sec.rows.map(r=>`  ${r.label}: ${r.value}${r.unit?' '+r.unit:''}`).join('\n')+'\n';}
+  function fullText(){
+    if(!tune)return '';
+    const buys=upgradesEnabled&&upgradePlan?'PIEZAS RECOMENDADAS (estimadas):\n'+upgradePlan.parts.map((p,i)=>`${i+1}. ${p.title} [${p.category}]`).join('\n')+'\n\n':'';
+    return `PISTATUNE — CONFIGURACIÓN ESTIMADA, NO OPTIMIZADA EN PISTA\n${tune.specs.carName}\nModo: ${tune.mode.label}\nTracción: ${tune.specs.drive} · ${tune.specs.gears} marchas\n\n${buys}${buildSections(tune).map(sectionText).join('\n')}\nFuente catálogo: https://forza.net/fh6cars\nAviso: piezas disponibles y PI por confirmar en la tienda; números orientativos sin validación de telemetría.\n`;
+  }
+  function copyText(txt){
+    if(navigator.clipboard?.writeText){navigator.clipboard.writeText(txt).then(()=>toast('¡Copiado! Pegalo donde quieras.')).catch(()=>legacyCopy(txt));}
+    else legacyCopy(txt);
+  }
+  function legacyCopy(str){
+    const textarea=document.createElement('textarea'); textarea.value=str;textarea.style.cssText='position:fixed;left:-9999px;top:0';document.body.appendChild(textarea);
+    textarea.focus();textarea.select();let ok=false;try{ok=document.execCommand('copy')}catch{}textarea.remove();
+    toast(ok?'¡Copiado!':'No se pudo copiar: probá descargar el TXT.');
+  }
+  function download(name,contents,type){
+    const blob=new Blob([contents],{type});const href=URL.createObjectURL(blob);const a=document.createElement('a');
+    a.href=href;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(href),1000);
+  }
+  function saveCurrent(){
+    if(!tune)return;
+    const carname=tune.specs.carName;
+    const label=`${carname} · ${tune.mode.label}`;
+    const id=(typeof crypto!=='undefined' && crypto.randomUUID)?crypto.randomUUID():String(Date.now())+'-'+Math.floor(Math.random()*99999);
+    saved.unshift({id,label,carId:selectedCar?.id||null,manual,name:readInput().name,profile:readInput().profile,mode:selectedMode,bias:Number($('bias').value),input:readInput(),variantId:chosenVariant,upgradesEnabled,buildLevel,keepClass:$('keepClass').checked,created:Date.now()});
+    saved=saved.slice(0,50);writeSaved();toast('Configuración guardada en este navegador.');
+  }
+  function showSaves(){
+    $('savedItems').innerHTML=saved.length ? saved.map(s=>`<div class="saved-row"><div><strong>${safe(s.label)}</strong><small>${new Date(s.created).toLocaleDateString('es-AR')}</small></div><div class="saved-row-actions"><button type="button" data-load="${escapeAttr(s.id)}">Abrir</button><button type="button" class="delete" data-delete="${escapeAttr(s.id)}" aria-label="Eliminar configuración">✕</button></div></div>`).join('') : '<div class="empty-saves">Todavía no guardaste ninguna. Creá un tuneo y tocá ♡ Guardar.</div>';
+    $('savesDialog').showModal();
+  }
+  function loadSave(s){
+    selectedMode=ENGINE.MODES[s.mode]?s.mode:'balance';
+    upgradesEnabled=s.upgradesEnabled!==false;buildLevel=['basic','balanced','max'].includes(s.buildLevel)?s.buildLevel:'balanced';$('keepClass').checked=s.keepClass!==false;renderBuildSettings();
+    const car=CARS.find(c=>c.id===s.carId);
+    if(car)applyCar(car);else{switchManual(s.name);$('customProfile').value=s.profile||'sport';}
+    const inp=s.input||{};
+    $('drive').value=inp.drive||'RWD';$('gears').value=String(inp.gears||6);
+    ['power','mass','front','rpm','radius','tire'].forEach(id=>{if(inp[id]!==undefined)$(id).value=inp[id];});
+    $('hasSusp').checked=!!inp.adjustables?.suspension;
+    $('hasAero').checked=!!inp.adjustables?.aero;
+    $('hasBrakes').checked=!!inp.adjustables?.brakes;
+    $('hasDiff').checked=!!inp.adjustables?.diff;
+    $('hasBars').checked=!!inp.adjustables?.bars;
+    $('hasGear').checked=!!inp.adjustables?.gearbox;
+    Object.keys(inp.ranges||{}).forEach(id=>{if($(id))$(id).value=inp.ranges[id];});
+    $('bias').value=String(s.bias||0);showBias();renderModes();
+    $('savesDialog').close();goStep(3);if(s.variantId)switchVariant(s.variantId);toast('Configuración recuperada.');
+  }
+  function setCatalogStatus(message, ready=false){
+    $('catalogCount').textContent=CARS.length.toLocaleString('es-AR');
+    $('catalogStatus').textContent=message;
+    $('catalogHint').classList.toggle('ready',ready);
+  }
+  async function updateCatalog(){
+    if(!CATALOG)return;
+    $('updateCatalog').disabled=true;
+    setCatalogStatus('Buscando modelos nuevos…',CARS.length>54);
+    try {
+      const result=await CATALOG.loadOnline();
+      setCatalogStatus(result.source==='oficial'?'Catálogo oficial actualizado':'Catálogo ampliado · fuente comunitaria',true);
+      if(document.activeElement===$('carSearch') && $('carSearch').value.trim() && $('carSearch').value!==selectedCar?.label){showMatches($('carSearch').value);}
+      if(result.added>0)toast(`Se incorporaron ${result.added} modelos al catálogo.`);
+    }catch(e){
+      setCatalogStatus(CARS.length>54?'Catálogo guardado · sin actualización':'54 autos sin conexión · probá Actualizar',CARS.length>54);
+    }finally{$('updateCatalog').disabled=false;}
+  }
+  function initializeCatalog(){
+    const cached=CATALOG?.cacheRead();
+    if(cached){setCatalogStatus('Catálogo guardado · disponible sin conexión',true);}
+    else{setCatalogStatus('54 autos incluidos · ampliando catálogo…');}
+    updateCatalog();
+  }
+  function attach(){
+    $('catalogCount').textContent=CARS.length;
+    applyCar(selectedCar);renderModes();updateSavedCount();
+    $('updateCatalog').addEventListener('click',updateCatalog);
+    initializeCatalog();
+    $('carSearch').addEventListener('input',e=>{showMatches(e.target.value);$('clearSearch').hidden=!e.target.value;});
+    $('carSearch').addEventListener('focus',e=>{if(e.target.value===selectedCar?.label)e.target.select();else showMatches(e.target.value);});
+    $('clearSearch').addEventListener('click',()=>{$('carSearch').value='';$('carSearch').focus();showMatches('');$('clearSearch').hidden=true;});
+    $('carOptions').addEventListener('click',e=>{
+      const button=e.target.closest('[data-car-id]');if(button){const car=CARS.find(c=>c.id===button.dataset.carId);if(car)applyCar(car);}
+      if(e.target.closest('#useCustomFromSearch')){switchManual($('carSearch').value);$('customName').focus();}
+    });
+    document.addEventListener('click',e=>{if(!e.target.closest('.car-search-group'))closeSearch();});
+    $('manualSwitch').addEventListener('click',toggleManual);
+    $('customName').addEventListener('input',refreshSide);
+    $('googleSearch').addEventListener('click',()=>{
+      const name=manual?$('customName').value.trim()||$('carSearch').value.trim():$('carSearch').value.trim()||selectedCar?.label;
+      const q=`${name||'Forza Horizon 6'} Forza Horizon 6 peso potencia reparto de peso setup tune`;
+      window.open('https://www.google.com/search?q='+encodeURIComponent(q),'_blank','noopener,noreferrer');
+      toast('Se abrió la búsqueda en Google: esta versión no extrae datos automáticamente.');
+    });
+    ['power','mass','front','rpm','radius','tire'].forEach(id=>$(id).addEventListener('input',renderCarFacts));
+    $('optimizerVariants').addEventListener('click',e=>{const btn=e.target.closest('[data-variant]');if(btn)switchVariant(btn.dataset.variant);});
+    $('saveTest').addEventListener('click',recordTest);
+    $('testHistory').addEventListener('click',e=>{const btn=e.target.closest('[data-variant]');if(btn)switchVariant(btn.dataset.variant);});
+    $('modeGrid').addEventListener('click',e=>{const button=e.target.closest('[data-mode]');if(button){selectedMode=button.dataset.mode;renderModes();}});
+    document.querySelectorAll('[data-build-enabled]').forEach(btn=>btn.addEventListener('click',()=>{upgradesEnabled=btn.dataset.buildEnabled==='yes';renderBuildSettings();}));
+    document.querySelectorAll('[data-build-level]').forEach(btn=>btn.addEventListener('click',()=>{buildLevel=btn.dataset.buildLevel;renderBuildSettings();}));
+    $('upgradePartList').addEventListener('change',e=>{
+      const box=e.target.closest('[data-purchased]');if(!box)return;
+      const id=box.dataset.purchased;const key=purchaseKey();const cur=new Set(purchasedIds());
+      if(box.checked)cur.add(id);else cur.delete(id);
+      purchased[key]=Array.from(cur);writePurchased();renderUpgradeResults();
+    });
+    renderBuildSettings();
+    $('bias').addEventListener('input',showBias);
+    $('step1Next').addEventListener('click',()=>goStep(2));
+    $('step2Back').addEventListener('click',()=>goStep(1));
+    $('step2Next').addEventListener('click',()=>goStep(3));
+    $('step3Back').addEventListener('click',()=>goStep(2));
+    $('restart').addEventListener('click',()=>goStep(1));
+    [1,2,3].forEach(i=>$('nav'+i).addEventListener('click',()=>{if(i===1 || i<=activeStep || i===2)goStep(i); else if(i===3 && activeStep===2)goStep(3);}));
+    $('toggleAll').addEventListener('click',()=>{allOpen=!allOpen;document.querySelectorAll('.tune-section').forEach(d=>d.open=allOpen);$('toggleAll').textContent=allOpen?'Cerrar todas':'Abrir todas';});
+    $('resultsList').addEventListener('click',e=>{const btn=e.target.closest('[data-copy-section]');if(btn){const sec=window._easyTuneSections?.[Number(btn.dataset.copySection)];if(sec)copyText(sectionText(sec));}});
+    $('copyAll').addEventListener('click',()=>copyText(fullText()));
+    $('saveTune').addEventListener('click',saveCurrent);
+    $('downloadTune').addEventListener('click',()=>download('pistatune-configuracion.txt',fullText(),'text/plain;charset=utf-8'));
+    $('openSaves').addEventListener('click',showSaves);
+    $('closeSaves').addEventListener('click',()=>$('savesDialog').close());
+    $('dialogCloseBottom').addEventListener('click',()=>$('savesDialog').close());
+    $('savedItems').addEventListener('click',e=>{
+      const load=e.target.closest('[data-load]');const del=e.target.closest('[data-delete]');
+      if(load){const found=saved.find(s=>s.id===load.dataset.load);if(found)loadSave(found)}
+      if(del){saved=saved.filter(s=>s.id!==del.dataset.delete);writeSaved();showSavesItemsOnly();}
+    });
+    $('exportSaves').addEventListener('click',()=>download('pistatune-guardados.json',JSON.stringify({format:'easytune-v1',exportedAt:new Date().toISOString(),saved},null,2),'application/json'));
+  }
+  function showSavesItemsOnly(){
+    $('savedItems').innerHTML=saved.length?saved.map(s=>`<div class="saved-row"><div><strong>${safe(s.label)}</strong><small>${new Date(s.created).toLocaleDateString('es-AR')}</small></div><div class="saved-row-actions"><button type="button" data-load="${escapeAttr(s.id)}">Abrir</button><button type="button" class="delete" data-delete="${escapeAttr(s.id)}">✕</button></div></div>`).join(''):'<div class="empty-saves">No hay configuraciones guardadas.</div>';
+  }
+  attach();
+  window.EasyTuneApp={getState:()=>({selectedMode,selectedCar:selectedCar?.label,manual,activeStep,tune}),goStep,readInput,computeAndRender};
+})();
+
+</script>
+</body>
+</html>
